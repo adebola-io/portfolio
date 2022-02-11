@@ -109,6 +109,47 @@
   transform: rotate(-45deg) translate(-2507%, var(--translateY));
   animation-duration: 1200ms;
 }
+.lines.line-6 {
+  left: 0;
+  height: 134%;
+  --oldTranslateY: -55%;
+  --newTranslateY: 30%;
+  transform: rotate(-45deg) translate(0%, var(--translateY));
+  animation-duration: 1350ms;
+}
+.lines.line-7 {
+  left: 0;
+  height: 134%;
+  --oldTranslateY: 159%;
+  --newTranslateY: 30%;
+  transform: rotate(-45deg) translate(1671%, var(--translateY));
+  animation-duration: 1350ms;
+}
+.lines.line-8 {
+  left: 0;
+  --oldTranslateY: -100%;
+  --newTranslateY: 0%;
+  transform: rotate(45deg) translate(0%, var(--translateY));
+  animation-duration: 600ms;
+}
+.lines.line-9 {
+  left: 0;
+  --oldTranslateY: 100%;
+  --newTranslateY: 0%;
+  transform: rotate(45deg) translate(2000%, var(--translateY));
+  animation-duration: 600ms;
+}
+.lines.line-10 {
+  left: 0;
+  --oldTranslateY: 100%;
+  --newTranslateY: 0%;
+  transform: rotate(45deg) translate(-2000%, var(--translateY));
+  animation-duration: 600ms;
+}
+
+section {
+  max-height: 900px;
+}
 
 section > .content {
   position: relative;
@@ -132,6 +173,11 @@ section > .content {
   font-size: 60pt;
   font-family: Lato, Candara, sans-serif;
   animation: heading 600ms;
+}
+@media (max-width: 1024px) {
+  .home-heading {
+    width: 80%;
+  }
 }
 @media (max-width: 425px) {
   .home-heading {

@@ -1,6 +1,8 @@
 @import "../../config/variables";
 @import "./lines";
-
+section {
+  max-height: 900px;
+}
 section > .content {
   position: relative;
   display: flex;
@@ -19,11 +21,14 @@ section > .content {
   width: 60%;
   margin-bottom: 4px;
   font-size: 60pt;
+  font-family: Lato, Candara, sans-serif;
+  animation: heading $home_page_animation_speed + ms;
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
   @media (max-width: 425px) {
     font-size: 35pt;
   }
-  font-family: Lato, Candara, sans-serif;
-  animation: heading $home_page_animation_speed + ms;
   span {
     transition-duration: var(--color_shift_transition_duration);
     color: var(--themeColor);
