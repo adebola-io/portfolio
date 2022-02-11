@@ -1,0 +1,79 @@
+@keyframes start_message_p {
+  0% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+  70% {
+    transform: none;
+    opacity: 1;
+  }
+  90%,
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+@keyframes start_secondary_bg {
+  0%,
+  70% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes page {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes header {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes heading {
+  0% {
+    transform: translateY(100%);
+  }
+}
+@keyframes heading_info {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+}
+@keyframes heading_button {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes color_shift {
+  0% {
+    --themeColor: var(--themeColor);
+  }
+  10%,
+  90% {
+    --themeColor: #3244ac;
+  }
+  20%,
+  80% {
+    --themeColor: #156ca7;
+  }
+  30%,
+  70% {
+    --themeColor: #585acc;
+  }
+  40%,
+  60% {
+    --themeColor: #31c6e09a;
+  }
+  50% {
+    --themeColor: #5fd687;
+  }
+  100% {
+    --themeColor: var(--themeColor);
+  }
+}

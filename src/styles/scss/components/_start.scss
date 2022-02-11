@@ -1,0 +1,26 @@
+@import "../config/variables";
+.start {
+  overflow: hidden;
+  .start-message {
+    width: 200%;
+    .start-main-bg {
+      height: 100%;
+      width: 50%;
+      background-color: var(--mainThemeInv);
+      p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 20pt;
+        color: var(--mainTheme);
+        animation: start_message_p $start_message + ms;
+      }
+    }
+    .start-secondary-bg {
+      height: 100%;
+      width: 50%;
+      background: var(--mainTheme);
+      transform: translate(-100%);
+      animation: start_secondary_bg $start_message + 400 + ms;
+    }
+  }
+}

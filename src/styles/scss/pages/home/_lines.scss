@@ -1,0 +1,49 @@
+.lines {
+  position: fixed;
+  right: 0;
+  z-index: -5;
+  bottom: 0;
+  height: 134%;
+  width: 5px;
+  margin: 0;
+  border: none;
+  transition: var(--color_shift_transition_duration);
+  --translateY: var(--oldTranslateY);
+  background-color: var(--themeColor);
+  animation: home_line $home_page_animation_speed + ms;
+  &.line-1 {
+    --oldTranslateY: 31%;
+    --newTranslateY: 125%;
+    transform: rotate(45deg) translate(0, var(--translateY));
+    animation-duration: $home_page_animation_speed + ms;
+  }
+  &.line-2 {
+    height: 114%;
+    --oldTranslateY: 35%;
+    --newTranslateY: 113%;
+    transform: rotate(45deg) translate(2090%, var(--translateY));
+    animation-duration: $home_page_animation_speed * 1.25 + ms;
+  }
+  &.line-3 {
+    height: 134%;
+    --vanish-transform: -111%;
+    --oldTranslateY: -16%;
+    --newTranslateY: -115%;
+    transform: rotate(-45deg) translate(-4007%, var(--translateY));
+    animation-duration: $home_page_animation_speed * 1.5 + ms;
+  }
+  &.line-4 {
+    height: 114%;
+    --oldTranslateY: 29%;
+    --newTranslateY: -55%;
+    transform: rotate(45deg) translate(719%, var(--translateY));
+    animation-duration: $home_page_animation_speed * 1.75 + ms;
+  }
+  &.line-5 {
+    height: 134%;
+    --oldTranslateY: -16%;
+    --newTranslateY: 75%;
+    transform: rotate(-45deg) translate(-2507%, var(--translateY));
+    animation-duration: $home_page_animation_speed * 2 + ms;
+  }
+}

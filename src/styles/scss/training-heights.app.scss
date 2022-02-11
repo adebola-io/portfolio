@@ -1,0 +1,71 @@
+/*
+* This is the base SCSS file for your app.
+*/
+@use "components/start";
+@use "components/header";
+@use "components/stars";
+@use "pages/home/home";
+@use "config/variables";
+@use "config/animations";
+
+@font-face {
+  font-family: Candara;
+  src: url("../assets/fonts/CANDARA.TTF");
+}
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-Regular.ttf);
+}
+:root {
+  --mainTheme: #141414;
+  --mainThemeInv: white;
+  // --mainTheme: white;
+  // --mainThemeInv: #141414;
+  --themeColor: #374ce9;
+  --color_shift_transition_duration: 1000ms;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background-color: var(--mainTheme);
+  box-sizing: border-box;
+  font-family: Candara, sans-serif;
+}
+.app {
+  color: var(--mainThemeInv);
+  font-family: sans-serif;
+  animation: color_shift 30000ms infinite;
+  overflow-x: hidden;
+  // --themeColor: #16a5d4;
+}
+.page {
+  animation: page 800ms;
+}
+main {
+  margin-top: 65px;
+}
+
+//
+.flex {
+  display: flex;
+}
+.fixed {
+  position: fixed;
+}
+.fcx {
+  display: flex;
+  justify-content: center;
+}
+.fcy {
+  display: flex;
+  align-items: center;
+}
+.fc {
+  @extend .flex, .fcx, .fcy;
+}
+.fcol {
+  @extend .flex;
+  flex-direction: column;
+}

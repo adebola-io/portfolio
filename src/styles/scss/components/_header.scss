@@ -1,0 +1,29 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  height: 65px;
+  width: 90%;
+  padding: 0 5%;
+  font-size: 13pt;
+  animation: header 800ms;
+  transition-duration: 700ms;
+  nav {
+    margin-left: auto;
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.header-navlink {
+  color: gray;
+  text-decoration: none;
+  // transition-duration: var(--color_shift_transition_duration);
+}
