@@ -208,10 +208,9 @@
   padding: 0;
 }
 .featured-work img {
-  height: 22%;
+  height: 45%;
   margin-left: auto;
-  margin-top: auto;
-  margin-bottom: 5%;
+  margin-right: 7%;
   filter: var(--filter);
   transition-duration: 400ms;
 }
@@ -232,16 +231,32 @@
   font-size: 13pt;
 }
 
-#sojourner-logo {
-  height: 23%;
+.btm-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35%;
+  margin: 0;
+  width: 100%;
+  margin-top: auto;
+}
+.btm-row span {
+  display: inherit;
+}
+.btm-row span a {
+  white-space: nowrap;
+  margin-left: 0;
 }
 
-#harmony-logo {
-  height: 20%;
+.project-link {
+  font-family: monospace;
+  text-transform: uppercase;
+  color: #a7a7a7;
+  text-decoration: none;
+  font-size: 12pt;
 }
-
-#pageweaver-logo {
-  height: 20%;
+.project-link:hover {
+  color: var(--secColor);
 }
 
 section {

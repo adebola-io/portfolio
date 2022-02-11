@@ -20,11 +20,21 @@ const FeaturedWork = (props) => {
         })}
       </ul>
       <p>{props.info}</p>
-      <img
-        id={`${props.name.toLowerCase()}-logo`}
-        src={props.logo.default}
-        alt={props.name}
-      />
+      <div className="btm-row">
+        <span>
+          <Link className="project-link" to={props.link} target="_blank">
+            Live Project
+          </Link>
+          <Link className="project-link" to={props.link} target="_blank">
+            Browse Code
+          </Link>
+        </span>
+        <img
+          id={`${props.name.toLowerCase()}-logo`}
+          src={props.logo.default}
+          alt={props.name}
+        />
+      </div>
     </Link>
   );
 };
