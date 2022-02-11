@@ -40,6 +40,8 @@ const Home = () => {
               return (
                 <FeaturedWork
                   key={index}
+                  logo={featuredWork.logo}
+                  filter={featuredWork.logoFilter}
                   name={featuredWork.name}
                   thColor={featuredWork.thColor}
                   thColor2={featuredWork.thColor2}

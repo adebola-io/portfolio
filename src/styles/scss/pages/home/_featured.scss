@@ -1,0 +1,94 @@
+.featured-works-container {
+  display: grid;
+  grid-template-columns: 31.3% 33.3% 31.3%;
+  column-gap: 2%;
+  row-gap: 4%;
+  width: 100%;
+  .see-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    color: white;
+    text-decoration: none;
+    font-size: 13pt;
+    font-weight: bold;
+    &:hover {
+      color: var(--themeColor);
+    }
+  }
+}
+.featured-work {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  max-height: 400px;
+  --filter: var(--imgFilter);
+  --bgTransform: translateY(100%);
+  color: white;
+  transition-duration: var(--color_shift_transition_duration);
+  background-image: linear-gradient(35deg, #292828, #221f1f);
+  text-decoration: none;
+  overflow: hidden;
+  &s-heading {
+    font-family: Candara, sans-serif;
+  }
+  &:hover {
+    color: var(--secColor);
+    border-color: var(--bgColor);
+    --bgTransform: none;
+    --filter: none;
+    transform: scale(1.02);
+  }
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 100%;
+    width: 100%;
+    transform: var(--bgTransform);
+    background-image: linear-gradient(45deg, var(--bgColor), var(--bgColor2));
+    transition-duration: 400ms;
+  }
+  & * {
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0;
+  }
+  img {
+    height: 22%;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 5%;
+    filter: var(--filter);
+    transition-duration: 400ms;
+  }
+  h1 {
+    margin-bottom: 0;
+    font-size: 25pt;
+    font-family: Lato, Tahoma, Geneva, Verdana, sans-serif;
+  }
+  ul {
+    display: flex;
+    margin-left: 0;
+    li {
+      list-style: none;
+      text-transform: uppercase;
+      margin-right: 1%;
+      font-family: monospace;
+      font-size: 13pt;
+    }
+  }
+}
+
+#sojourner-logo {
+  height: 23%;
+}
+#harmony-logo {
+  height: 20%;
+}
+#pageweaver-logo {
+  height: 20%;
+}

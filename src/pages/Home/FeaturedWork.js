@@ -7,6 +7,7 @@ const FeaturedWork = (props) => {
     "--bgColor": props.thColor,
     "--bgColor2": props.thColor2,
     "--secColor": props.scColor,
+    "--imgFilter": props.filter,
     height: window.innerHeight / 2,
     transitionDuration: props.transitionDuration,
   };
@@ -19,6 +20,11 @@ const FeaturedWork = (props) => {
         })}
       </ul>
       <p>{props.info}</p>
+      <img
+        id={`${props.name.toLowerCase()}-logo`}
+        src={props.logo.default}
+        alt={props.name}
+      />
     </Link>
   );
 };
@@ -35,6 +41,7 @@ FeaturedWork.defaultProps = {
   name: "Featured Work",
   info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ad, maxime voluptates ut dolor volu.",
   scColor: "white",
+  logo: { default: "." },
   technologies: [],
 };
 

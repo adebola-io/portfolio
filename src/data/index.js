@@ -1,6 +1,8 @@
 export const works = [
   {
     name: "Bubble",
+    logo: require("../assets/images/logos/bubble.png"),
+    logoFilter: "saturate(0) invert(1)",
     featured: true,
     info: "A web music player.",
     thColor: "#99105c",
@@ -9,6 +11,8 @@ export const works = [
   },
   {
     name: "Aurora",
+    logo: require("../assets/images/logos/aurora.png"),
+    logoFilter: "saturate(0) contrast(1.5)",
     featured: true,
     info: "A web music player.",
     thColor: "yellow",
@@ -18,6 +22,8 @@ export const works = [
   },
   {
     name: "Sojourner",
+    logo: require("../assets/images/logos/sojourner.png"),
+    logoFilter: "saturate(0) invert(1)",
     featured: true,
     info: "A concept website for a space tourism company.",
     thColor: "#3d3dbd",
@@ -26,6 +32,8 @@ export const works = [
   },
   {
     name: "Harmony",
+    logo: require("../assets/images/logos/harmony.png"),
+    logoFilter: "saturate(0) invert(1) brightness(1.2)",
     featured: true,
     info: "Student course manager.",
     thColor: "red",
@@ -35,6 +43,8 @@ export const works = [
   },
   {
     name: "Pageweaver",
+    logo: require("../assets/images/logos/pageweaver.png"),
+    logoFilter: "saturate(0) brightness(1.5)",
     info: "A CLI application for generating and managing boilerplate text for new web projects.",
     featured: true,
     thColor: "#135c2c",
