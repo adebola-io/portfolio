@@ -8,7 +8,7 @@ const Start = () => {
         style={{ height: `${window.innerHeight}px` }}
       >
         <div className="fc start-main-bg">
-          <p>Hello.</p>
+          <p>Hi there.</p>
         </div>
         <div className="start-secondary-bg"></div>
       </div>

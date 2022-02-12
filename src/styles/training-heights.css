@@ -13,7 +13,7 @@
   margin: 0;
   font-weight: bold;
   font-size: 20pt;
-  color: var(--mainTheme);
+  color: var(--themeColor);
   animation: start_message_p 3000ms;
 }
 .start .start-message .start-secondary-bg {
