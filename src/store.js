@@ -1,7 +1,7 @@
 const initialState = {
   headerColor: "transparent",
   currentPage: "Home",
-  sectionHeight: window.innerHeight - 65,
+  sectionHeight: window.innerHeight - 65 > 900 ? 900 : window.innerHeight - 65,
   showFeatured: false,
   linesTranslate: "var(--oldTranslateY)",
   test: "testing",

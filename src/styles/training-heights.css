@@ -33,6 +33,7 @@
   height: 65px;
   width: 90%;
   padding: 0 5%;
+  background-image: linear-gradient(var(--mainTheme), transparent);
   font-size: 13pt;
   animation: header 800ms;
   transition-duration: 700ms;
@@ -203,14 +204,19 @@
 }
 .featured-work * {
   position: relative;
+  z-index: 1;
   margin-left: 5%;
   margin-right: 5%;
   padding: 0;
 }
 .featured-work img {
-  height: 45%;
-  margin-left: auto;
-  margin-right: 7%;
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+  height: 100%;
+  margin-right: 0;
+  margin-left: 0;
   filter: var(--filter);
   transition-duration: 400ms;
 }

@@ -6,7 +6,7 @@ import { navigateTo } from "../actions";
 const Header = () => {
   const state = useSelector((state) => state);
   return (
-    <header style={{ backgroundColor: state.headerColor }} className="header">
+    <header className="header">
       <nav>
         <ul>
           <NavLink to="/" name="Home" />

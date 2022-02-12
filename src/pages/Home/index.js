@@ -1,6 +1,6 @@
 import React from "react";
 import FeaturedWork from "./FeaturedWork";
-import { navigateTo, toggleLines, updateHeaderColor } from "../../actions";
+import { navigateTo, toggleLines } from "../../actions";
 import Lines from "./Lines";
 import HomeBanner from "./HomeBanner";
 import { Link } from "react-router-dom";
@@ -12,7 +12,6 @@ const Home = () => {
   const dispatch = useDispatch();
   function scrollListener() {
     at(state.sectionHeight / 1.25, toggleLines);
-    at(state.sectionHeight / 1.5, updateHeaderColor);
   }
   function at(scrollT, action) {
     if (document.querySelector("html").scrollTop > scrollT) {

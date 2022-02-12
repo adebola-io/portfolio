@@ -2,7 +2,7 @@ export const works = [
   {
     name: "Bubble",
     logo: require("../assets/images/logos/bubble.png"),
-    logoFilter: "saturate(0) invert(1)",
+    logoFilter: "saturate(0) brightness(2.65) invert(1) opacity(0.5)",
     link: "http://bubble-music.netlify.app",
     code: "http://bubble-music.netlify.app",
     featured: true,
@@ -14,7 +14,7 @@ export const works = [
   {
     name: "Aurora",
     logo: require("../assets/images/logos/aurora.png"),
-    logoFilter: "saturate(0) contrast(1.5)",
+    logoFilter: "saturate(0) contrast(1.5) brightness(0.5) opacity(0.5)",
     link: "http://aurora.netlify.app",
     code: "http://bubble-music.netlify.app",
     featured: true,
@@ -27,20 +27,20 @@ export const works = [
   {
     name: "Sojourner",
     logo: require("../assets/images/logos/sojourner.png"),
-    logoFilter: "saturate(0) invert(1)",
+    logoFilter: "saturate(0) invert(1) brightness(0.8) opacity(0.5)",
     link: "http://sojourner.netlify.app",
     code: "http://bubble-music.netlify.app",
     featured: true,
     info: "A concept website for a space tourism company.",
     thColor: "#3d3dbd",
     thColor2: "#5d7fdf",
-    scColor: "#1b033a",
+    // scColor: "#1b033a",
     technologies: ["Vue"],
   },
   {
     name: "Harmony",
     logo: require("../assets/images/logos/harmony.png"),
-    logoFilter: "saturate(0) invert(1) brightness(1.2)",
+    logoFilter: "saturate(0) invert(1) brightness(0.6) opacity(0.5)",
     link: "http://harmony.netlify.app",
     code: "http://bubble-music.netlify.app",
     featured: true,
@@ -53,13 +53,27 @@ export const works = [
   {
     name: "Pageweaver",
     logo: require("../assets/images/logos/pageweaver.png"),
-    logoFilter: "saturate(0) brightness(1.5)",
+    logoFilter: "saturate(0) brightness(0.7) opacity(0.5)",
     link: "http://pageweaver.netlify.app",
     code: "http://bubble-music.netlify.app",
     info: "A CLI application for generating and managing boilerplate text for new web projects.",
     featured: true,
     thColor: "#05461b",
-    thColor2: "#22ab12",
+    thColor2: "#0d5c03",
     technologies: ["NodeJS"],
   },
 ];
+
+// export const stack = [
+//   {
+//     name: "React",
+//     logo: require("../assets/images/logos/react.png"),
+//   },
+//   {
+//     name: "Vue",
+//     logo: require("../assets/images/logos/vue.png"),
+//   },
+//   {
+//     name: "",
+//   },
+// ];
