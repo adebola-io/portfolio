@@ -21,7 +21,7 @@ export const works = [
     info: "A web music player.",
     thColor: "yellow",
     thColor2: "#ff8100",
-    scColor: "black",
+    scColor: "#442d01",
     technologies: ["Typescript", "SCSS"],
   },
   {
@@ -34,6 +34,7 @@ export const works = [
     info: "A concept website for a space tourism company.",
     thColor: "#3d3dbd",
     thColor2: "#5d7fdf",
+    scColor: "#1b033a",
     technologies: ["Vue"],
   },
   {
