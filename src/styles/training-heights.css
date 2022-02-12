@@ -68,6 +68,10 @@ footer .footer-links {
   margin-left: auto;
   padding: 0;
 }
+footer .footer-links a {
+  color: inherit;
+  text-decoration: none;
+}
 footer .footer-links li {
   list-style: none;
   margin-left: 19px;

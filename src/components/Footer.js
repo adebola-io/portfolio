@@ -16,7 +16,9 @@ const Footer = () => {
 const FtrLink = (props) => {
   return (
     <li>
-      <img className="footer-link" src="" alt={props.name} />
+      <a href={props.to}>
+        <img className="footer-link" src={props.logo} alt={props.name} />
+      </a>
     </li>
   );
 };
