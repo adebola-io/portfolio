@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 90%;
+  padding: 0 5%;
+  //   background-color: #252525;
+  color: gray;
+  font-size: 10pt;
+  .footer-links {
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+    li {
+      list-style: none;
+      margin-left: 19px;
+    }
+  }
+}
