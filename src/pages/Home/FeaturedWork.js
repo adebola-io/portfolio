@@ -12,20 +12,24 @@ const FeaturedWork = (props) => {
     transitionDuration: props.transitionDuration,
   };
   return (
-    <a href={props.link} style={FeaturedWorkStyle} className="featured-work">
+    <Link
+      to={`/works/${props.name.toLowerCase()}`}
+      style={FeaturedWorkStyle}
+      className="featured-work"
+    >
       <h1>{props.name}</h1>
-      <ul className="technologies-used">
-        {props.technologies.map((technology, index) => {
-          return <li key={index}>{technology}</li>;
-        })}
-      </ul>
       <p>{props.info}</p>
       <img
         id={`${props.name.toLowerCase()}-logo`}
         src={props.logo.default}
         alt={props.name}
       />
-    </a>
+      <ul className="technologies-used">
+        {props.technologies.map((technology, index) => {
+          return <li key={index}>{technology}</li>;
+        })}
+      </ul>
+    </Link>
   );
 };
 FeaturedWork.propTypes = {
