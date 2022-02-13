@@ -582,10 +582,11 @@ main {
 .backdrop span {
   transform: translateX(-40%);
   animation: backdroptxt 750ms;
+  transition-duration: 200ms;
 }
 .backdrop span p {
   margin: 0;
-  transition-duration: 200ms;
+  white-space: nowrap;
 }
 
 .flex, .fcol, .fc {

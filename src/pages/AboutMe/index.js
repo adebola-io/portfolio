@@ -3,13 +3,13 @@ import { useDispatch } from "react-redux";
 import { changeBackdropText } from "../../redux/actions";
 import { animateBackdropTextChange } from "../../utils/func";
 
-const AllWorks = () => {
+const AboutMe = () => {
   const dispatch = useDispatch();
   React.useEffect(() => {
     animateBackdropTextChange();
-    dispatch(changeBackdropText("Works"));
+    dispatch(changeBackdropText("About"));
   }, []);
   return <main></main>;
 };
 
-export default AllWorks;
+export default AboutMe;

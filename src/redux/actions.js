@@ -26,6 +26,13 @@ export function navigateTo(payload) {
   };
 }
 
+export function changeBackdropText(payload) {
+  return {
+    type: "CHANGE_BACKDROP_TEXT",
+    payload,
+  };
+}
+
 // export function showFeaturedWorks(payload) {
 //   return {
 //     type: "SHOW_FEATURED",

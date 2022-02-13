@@ -1,5 +1,6 @@
 const initialState = {
   currentPage: "Home",
+  backdropText: "Adebola",
   sectionHeight: window.innerHeight - 65 > 900 ? 900 : window.innerHeight - 65,
   showFeatured: false,
   linesTranslate: "var(--oldTranslateY)",
@@ -21,6 +22,11 @@ const reducer = function (
       return {
         ...state,
         currentPage: action.payload,
+      };
+    case "CHANGE_BACKDROP_TEXT":
+      return {
+        ...state,
+        backdropText: action.payload,
       };
     case "TOGGLE_LINES":
       return {

@@ -7,6 +7,7 @@ import BackdropText from "./components/BackdropText";
 import Footer from "./components/Footer";
 import Home from "./pages/Home/index";
 import AllWorks from "./pages/AllWorks/index";
+import AboutMe from "./pages/AboutMe";
 import "./styles/training-heights.css";
 
 const Adebola = () => {
@@ -19,10 +20,11 @@ const Adebola = () => {
       <div className="app">
         <Router>
           <Header />
-          <BackdropText text="Adebola" />
+          <BackdropText />
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/works" element={<AllWorks />}></Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/works" element={<AllWorks />} />
+            <Route path="/about-me" element={<AboutMe />} />
           </Routes>
           <Footer />
         </Router>

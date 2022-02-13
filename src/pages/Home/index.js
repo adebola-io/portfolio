@@ -4,8 +4,13 @@ import Info from "./Info";
 import ContactMe from "./ContactMe";
 import HomeBanner from "./HomeBanner";
 import Lines from "./Lines";
-import { toggleLines, stopTogglingLines } from "../../redux/actions";
+import {
+  toggleLines,
+  stopTogglingLines,
+  changeBackdropText,
+} from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
+import { animateBackdropTextChange } from "../../utils/func";
 
 const Home = () => {
   const state = useSelector((state) => state);
@@ -27,6 +32,8 @@ const Home = () => {
   }
   React.useEffect(() => {
     let mounted = true;
+    animateBackdropTextChange();
+    dispatch(changeBackdropText("Adebola"));
     window.addEventListener("scroll", scrollListener);
     return () => {
       if (!mounted) window.removeEventListener("scroll", scrollListener);

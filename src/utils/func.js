@@ -14,3 +14,12 @@ export const whenInView = (element, callback, offset = 0) => {
       callback();
   }
 };
+
+export const animateBackdropTextChange = () => {
+  document
+    .querySelector(".backdrop span")
+    .animate(
+      [{ transform: "translateX(-50%)" }, { transform: "translateX(-40%)" }],
+      { duration: 400 }
+    );
+};
