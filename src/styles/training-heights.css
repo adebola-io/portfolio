@@ -87,7 +87,7 @@ footer .footer-links li {
 .lines {
   position: fixed;
   right: 0;
-  z-index: -5;
+  z-index: -2;
   bottom: 0;
   height: 134%;
   width: 5px;
@@ -252,7 +252,10 @@ footer .footer-links li {
 }
 .featured-work p {
   margin-top: 7%;
-  font-size: 11pt;
+  margin-right: 10%;
+  font-size: 10pt;
+  font-family: sans-serif;
+  line-height: 18px;
 }
 .featured-work ul {
   display: flex;
@@ -295,6 +298,57 @@ footer .footer-links li {
 }
 .project-link:hover {
   color: var(--secColor);
+}
+
+#info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 5%;
+}
+#info div {
+  overflow: hidden;
+  height: fit-content;
+  width: 45%;
+}
+#info div p {
+  width: 100%;
+  text-align: end;
+  transition-duration: 750ms;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(130%);
+}
+
+#contactme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#contactme h2 {
+  font-size: 20pt;
+  margin: 3% 0;
+}
+#contactme h1 {
+  margin-top: 0;
+  font-size: 40pt;
+  font-family: Lato;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+#contactme h1:hover {
+  color: var(--themeColor);
+  transform: scale(1.05);
+}
+#contactme p {
+  margin: 0;
+}
+#contactme ul {
+  display: flex;
+  padding: 0;
 }
 
 section {
@@ -414,6 +468,12 @@ section > .content {
     opacity: 0;
   }
 }
+@keyframes backdroptxt {
+  0% {
+    transform: translate(-50%);
+    opacity: 0;
+  }
+}
 @keyframes header {
   0% {
     transform: translateY(-100%);
@@ -479,6 +539,12 @@ section > .content {
 html {
   scroll-behavior: smooth;
 }
+html::-webkit-scrollbar {
+  background-color: var(--mainTheme);
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #414141;
+}
 
 body {
   margin: 0;
@@ -500,6 +566,26 @@ body {
 
 main {
   margin-top: 65px;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: -3;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: #252525;
+  font-size: 40vw;
+  overflow: hidden;
+}
+.backdrop span {
+  transform: translateX(-40%);
+  animation: backdroptxt 750ms;
+}
+.backdrop span p {
+  margin: 0;
+  transition-duration: 200ms;
 }
 
 .flex, .fcol, .fc {

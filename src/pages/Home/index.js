@@ -1,23 +1,28 @@
 import React from "react";
-import FeaturedWork from "./FeaturedWork";
-import { navigateTo, toggleLines } from "../../actions";
-import Lines from "./Lines";
+import FeaturedWorks from "./FeaturedWork";
+import Info from "./Info";
+import ContactMe from "./ContactMe";
 import HomeBanner from "./HomeBanner";
-import { Link } from "react-router-dom";
+import Lines from "./Lines";
+import { toggleLines, stopTogglingLines } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
-import { works } from "../../data";
 
 const Home = () => {
   const state = useSelector((state) => state);
+  const html = document.querySelector("html");
   const dispatch = useDispatch();
   function scrollListener() {
-    at(state.sectionHeight / 1.25, toggleLines);
-  }
-  function at(scrollT, action) {
-    if (document.querySelector("html").scrollTop > scrollT) {
-      dispatch(action(true));
+    if (
+      ((html.scrollTop > state.sectionHeight / 2 &&
+        html.scrollTop < state.sectionHeight * 1.5) ||
+        html.scrollTop > state.sectionHeight * 2.75) &&
+      !state.stopTogglingLines
+    ) {
+      dispatch(toggleLines(true));
+      dispatch(stopTogglingLines(true));
     } else {
-      dispatch(action(false));
+      dispatch(toggleLines(false));
+      dispatch(stopTogglingLines(false));
     }
   }
   React.useEffect(() => {
@@ -27,45 +32,12 @@ const Home = () => {
       if (!mounted) window.removeEventListener("scroll", scrollListener);
     };
   }, []);
-  const featuredWorks = works.filter((work) => work.featured);
   return (
     <main id="home" className="page">
       <HomeBanner />
-      <section id="featured-works">
-        <div className="content">
-          <h1 className="featured-works-heading">Featured Works</h1>
-          <div className="featured-works-container">
-            {featuredWorks.map((featuredWork, index) => {
-              return (
-                <FeaturedWork
-                  key={index}
-                  logo={featuredWork.logo}
-                  link={featuredWork.link}
-                  code={featuredWork.code}
-                  filter={featuredWork.logoFilter}
-                  name={featuredWork.name}
-                  thColor={featuredWork.thColor}
-                  thColor2={featuredWork.thColor2}
-                  scColor={featuredWork.scColor}
-                  info={featuredWork.info}
-                  technologies={featuredWork.technologies}
-                  transitionDuration={`${(index + 1) * 200}ms`}
-                />
-              );
-            })}
-            <Link
-              onClick={() => {
-                dispatch(navigateTo("Works"));
-              }}
-              className="see-all"
-              to="/works"
-            >
-              SEE ALL WORKS -{">"}
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section style={{ height: `${state.sectionHeight}px` }}></section>
+      <Info />
+      <FeaturedWorks />
+      <ContactMe height={`${state.sectionHeight}px`} />
       <Lines />
     </main>
   );

@@ -12,6 +12,13 @@ export function toggleLines(payload) {
   };
 }
 
+export function stopTogglingLines(payload) {
+  return {
+    type: "STOP_TOGGLING_LINES",
+    payload,
+  };
+}
+
 export function navigateTo(payload) {
   return {
     type: "NAVIGATE_TO",

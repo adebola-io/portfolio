@@ -27,9 +27,12 @@
 }
 html {
   scroll-behavior: smooth;
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
+  &::-webkit-scrollbar {
+    background-color: var(--mainTheme);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #414141;
+  }
 }
 body {
   margin: 0;
@@ -49,6 +52,26 @@ body {
 }
 main {
   margin-top: 65px;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: -3;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: #252525;
+  font-size: 40vw;
+  overflow: hidden;
+  span {
+    transform: translateX(-40%);
+    animation: backdroptxt 750ms;
+    p {
+      margin: 0;
+      transition-duration: 200ms;
+    }
+  }
 }
 
 //

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
-import { navigateTo } from "../actions";
+import { navigateTo } from "../redux/actions";
 const Header = () => {
   const state = useSelector((state) => state);
   return (
@@ -25,6 +25,7 @@ const NavLink = (props) => {
     <li>
       <Link
         className="header-navlink"
+        id={`header-navlink-${props.name.toLowerCase()}`}
         style={{
           color: state.currentPage === props.name ? "white" : "gray",
           //   fontWeight: isSelected ? "bold" : "normal",

@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 const HomeBanner = () => {
   const state = useSelector((state) => state);
+
   return (
     <section id="home-banner" style={{ height: `${state.sectionHeight}px` }}>
       <div className="overlay"></div>
@@ -14,8 +15,8 @@ const HomeBanner = () => {
           </h1>
         </div>
         <p className="home-heading-info">
-          Hi, I'm Adebola, a front-end web developer based in Lagos, Nigeria,
-          bringing ideas to life, one line of code at a time.
+          Welcome! You've reached the page of Adebola Akomolafe, a front-end web
+          developer from Lagos, Nigeria.
         </p>
         <Link className="heading-button contact-me" to="/contact-me">
           <span>Contact Me</span>

@@ -1,9 +1,9 @@
 const initialState = {
-  headerColor: "transparent",
   currentPage: "Home",
   sectionHeight: window.innerHeight - 65 > 900 ? 900 : window.innerHeight - 65,
   showFeatured: false,
   linesTranslate: "var(--oldTranslateY)",
+  stopTogglingLines: false,
   test: "testing",
 };
 
@@ -28,6 +28,11 @@ const reducer = function (
         linesTranslate: action.payload
           ? "var(--newTranslateY)"
           : "var(--oldTranslateY)",
+      };
+    case "STOP_TOGGLING_LINES":
+      return {
+        ...state,
+        stopTogglingLines: action.payload,
       };
     case "SHOW_FEATURED":
       return {

@@ -1,6 +1,50 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { navigateTo } from "../../redux/actions";
+import { works } from "../../data";
+
+const FeaturedWorks = () => {
+  const dispatch = useDispatch();
+  const featuredWorks = works.filter((work) => work.featured);
+  return (
+    <section id="featured-works">
+      <div className="content">
+        <h1 className="featured-works-heading">Featured Works</h1>
+        <div className="featured-works-container">
+          {featuredWorks.map((featuredWork, index) => {
+            return (
+              <FeaturedWork
+                key={index}
+                logo={featuredWork.logo}
+                link={featuredWork.link}
+                code={featuredWork.code}
+                filter={featuredWork.logoFilter}
+                name={featuredWork.name}
+                thColor={featuredWork.thColor}
+                thColor2={featuredWork.thColor2}
+                scColor={featuredWork.scColor}
+                info={featuredWork.info}
+                technologies={featuredWork.technologies}
+                transitionDuration={`${(index + 1) * 200}ms`}
+              />
+            );
+          })}
+          <Link
+            onClick={() => {
+              dispatch(navigateTo("Works"));
+            }}
+            className="see-all"
+            to="/works"
+          >
+            SEE ALL WORKS -{">"}
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const FeaturedWork = (props) => {
   const FeaturedWorkStyle = {
@@ -49,4 +93,4 @@ FeaturedWork.defaultProps = {
   technologies: [],
 };
 
-export default FeaturedWork;
+export default FeaturedWorks;
