@@ -11,11 +11,11 @@
       width: 100%;
       font-size: 16pt;
       text-align: end;
-      transition-duration: 750ms;
+      transition-duration: 600ms;
     }
   }
 }
 .hidden {
   opacity: 0;
-  transform: translateY(130%);
+  transform: translateX(10%);
 }

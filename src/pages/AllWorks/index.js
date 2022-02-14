@@ -1,15 +1,12 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { changeBackdropText } from "../../redux/actions";
-import { animateBackdropTextChange } from "../../utils/func";
+import BackdropText from "../../components/BackdropText";
 
 const AllWorks = () => {
-  const dispatch = useDispatch();
-  React.useEffect(() => {
-    animateBackdropTextChange();
-    dispatch(changeBackdropText("Works"));
-  }, [dispatch]);
-  return <main></main>;
+  return (
+    <main>
+      <BackdropText text="Works" />
+    </main>
+  );
 };
 
 export default AllWorks;

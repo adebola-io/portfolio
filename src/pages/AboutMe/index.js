@@ -1,15 +1,12 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { changeBackdropText } from "../../redux/actions";
-import { animateBackdropTextChange } from "../../utils/func";
+import BackdropText from "../../components/BackdropText";
 
 const AboutMe = () => {
-  const dispatch = useDispatch();
-  React.useEffect(() => {
-    animateBackdropTextChange();
-    dispatch(changeBackdropText("About"));
-  }, [dispatch]);
-  return <main></main>;
+  return (
+    <main>
+      <BackdropText text="About" />
+    </main>
+  );
 };
 
 export default AboutMe;

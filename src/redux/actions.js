@@ -33,6 +33,12 @@ export function changeBackdropText(payload) {
   };
 }
 
+export function pastBanner(payload) {
+  return {
+    type: "SCROLL_PAST_BANNER",
+    payload,
+  };
+}
 // export function showFeaturedWorks(payload) {
 //   return {
 //     type: "SHOW_FEATURED",

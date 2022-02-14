@@ -5,7 +5,10 @@ import { useSelector } from "react-redux";
 const HomeBanner = () => {
   const state = useSelector((state) => state);
   return (
-    <section id="home-banner" style={{ height: `${state.sectionHeight}px` }}>
+    <section
+      id="home-banner"
+      style={{height: `${state.sectionHeight}px`}}
+    >
       <div className="overlay"></div>
       <div className="content">
         <div className="home-heading-container">

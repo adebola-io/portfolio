@@ -5,12 +5,15 @@ const initialState = {
   showFeatured: false,
   linesTranslate: "var(--oldTranslateY)",
   stopTogglingLines: false,
+  bannerOpacity: "1",
+  bannerScale: "1",
+  bannerTranslateY: "0",
   test: "testing",
 };
 
 const reducer = function (
   state = initialState,
-  action = { type: "NO_ACTION", payload: "" }
+  action = { type: "NO_ACTION", payload: "", subload: "" }
 ) {
   switch (action.type) {
     case "UPDATE_HEADER_COLOR":
@@ -27,6 +30,13 @@ const reducer = function (
       return {
         ...state,
         backdropText: action.payload,
+      };
+    case "SCROLL_PAST_BANNER":
+      return {
+        ...state,
+        bannerOpacity: action.payload ? "0" : "1",
+        bannerScale: action.payload ? "0.95" : "1",
+        bannerTranslateY: action.payload ? "0%" : "0",
       };
     case "TOGGLE_LINES":
       return {

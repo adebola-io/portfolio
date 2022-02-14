@@ -88,4 +88,8 @@ export const works = [
 //   },
 // ];
 
-export const contacts = [{ name: "Twitter", link: "http://" }];
+export const contacts = [
+  { name: "Twitter", link: "http://" },
+  { name: "Github", link: "http://" },
+  { name: "LinkedIn", link: "http://" },
+];

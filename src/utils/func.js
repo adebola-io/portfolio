@@ -38,3 +38,20 @@ export function numerate(element, property) {
       .slice(0, -2)
   );
 }
+
+/**
+ * document.querySelector yadda yadda.
+ * @param {String} selector
+ * @returns {HTMLElement}
+ */
+export function element(selector) {
+  return document.querySelector(selector);
+}
+/**
+ * document.querySelectorAll yadda yadda.
+ * @param {String} selector 
+ * @returns {NodeList}
+ */
+export function elementAll (selector) {
+  return document.querySelectorAll(selector);
+}

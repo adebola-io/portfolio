@@ -13,7 +13,7 @@
   margin: 0;
   font-weight: bold;
   font-size: 20pt;
-  color: var(--themeColor);
+  color: var(--mainTheme);
   animation: start_message_p 3000ms;
 }
 .start .start-message .start-secondary-bg {
@@ -192,6 +192,11 @@ footer .footer-links li {
   color: var(--themeColor);
 }
 
+.hide-features {
+  opacity: 0;
+  transform: translateY(10%);
+}
+
 .featured-work {
   position: relative;
   display: flex;
@@ -316,12 +321,12 @@ footer .footer-links li {
   width: 100%;
   font-size: 16pt;
   text-align: end;
-  transition-duration: 750ms;
+  transition-duration: 600ms;
 }
 
 .hidden {
   opacity: 0;
-  transform: translateY(130%);
+  transform: translateX(10%);
 }
 
 #contactme {
@@ -352,6 +357,10 @@ footer .footer-links li {
   display: flex;
   padding: 0;
 }
+#contactme ul li {
+  list-style: none;
+  margin-right: 10px;
+}
 
 section {
   max-height: 900px;
@@ -365,6 +374,19 @@ section > .content {
   width: 90%;
   height: 100%;
   padding: 0 5%;
+}
+
+#home-banner {
+  position: fixed;
+  top: 0;
+  margin-top: 65px;
+  width: 100%;
+  transition-duration: 400ms;
+}
+
+.hide-banner {
+  opacity: 0;
+  transform: scale(0.9) translateY(-10%);
 }
 
 .home-heading-container {
@@ -511,10 +533,10 @@ section > .content {
     --themeColor: #585acc;
   }
   40%, 60% {
-    --themeColor: #31e07a9a;
+    --themeColor: #319ae09a;
   }
   50% {
-    --themeColor: #298d1b;
+    --themeColor: #07859b;
   }
   100% {
     --themeColor: var(--themeColor);

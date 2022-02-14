@@ -18,6 +18,10 @@
     }
   }
 }
+.hide-features {
+  opacity: 0;
+  transform: translateY(10%);
+}
 .featured-work {
   position: relative;
   display: flex;
