@@ -3,19 +3,10 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { navigateTo } from "../../redux/actions";
-import { whenInView } from "../../utils/func";
 import { works } from "../../data";
 
 const FeaturedWorks = () => {
   const reference = React.useRef(null);
-  function listen() {}
-  React.useEffect(() => {
-    let mounted = true;
-    window.addEventListener("scroll", listen);
-    return () => {
-      if (!mounted) window.removeEventListener("scroll", listen);
-    };
-  });
   const dispatch = useDispatch();
   const featuredWorks = works.filter((work) => work.featured);
   return (
@@ -37,7 +28,6 @@ const FeaturedWorks = () => {
                 scColor={featuredWork.scColor}
                 info={featuredWork.info}
                 technologies={featuredWork.technologies}
-                transitionDuration={`${(index + 1) * 200}ms`}
               />
             );
           })}
@@ -63,7 +53,6 @@ const FeaturedWork = (props) => {
     "--secColor": props.scColor,
     "--imgFilter": props.filter,
     height: window.innerHeight / 2,
-    transitionDuration: props.transitionDuration,
   };
   return (
     <Link

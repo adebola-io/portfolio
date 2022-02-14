@@ -8,7 +8,7 @@ const AllWorks = () => {
   React.useEffect(() => {
     animateBackdropTextChange();
     dispatch(changeBackdropText("Works"));
-  }, []);
+  }, [dispatch]);
   return <main></main>;
 };
 

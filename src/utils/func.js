@@ -23,3 +23,18 @@ export const animateBackdropTextChange = () => {
       { duration: 400 }
     );
 };
+
+/**
+ * Get computed values as numbers (in pixels).
+ * @param {HTMLElement} element DOM Element
+ * @param {'height'|'width'|'padding-right'|'padding-left'|'margin-right'|'margin-left'|'font-size'} property
+ * @returns {Number}
+ */
+export function numerate(element, property) {
+  return parseFloat(
+    window
+      .getComputedStyle(element, null)
+      .getPropertyValue(property)
+      .slice(0, -2)
+  );
+}

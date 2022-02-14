@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
 import { navigateTo } from "../redux/actions";
 const Header = () => {
-  const state = useSelector((state) => state);
   return (
     <header className="header">
       <nav>

@@ -10,12 +10,13 @@ section {
 section > .content {
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   width: 90%;
   height: 100%;
   padding: 0 5%;
 }
+
 .home-heading-container {
   height: fit-content;
   width: fit-content;

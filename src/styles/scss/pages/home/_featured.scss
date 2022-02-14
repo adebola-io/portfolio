@@ -28,7 +28,7 @@
   --bgTransform: translateY(100%);
   --tagColor: gray;
   color: white;
-  transition-duration: var(--color_shift_transition_duration);
+  transition-duration: 400ms;
   background-image: linear-gradient(35deg, #292828, #221f1f);
   text-decoration: none;
   overflow: hidden;
@@ -41,7 +41,7 @@
     --bgTransform: none;
     --filter: none;
     --tagColor: var(--secColor);
-    // transform: scale(1.02);
+    transform: scale(0.95);
   }
   &::before {
     position: absolute;

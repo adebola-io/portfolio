@@ -16,29 +16,30 @@ const Home = () => {
   const state = useSelector((state) => state);
   const html = document.querySelector("html");
   const dispatch = useDispatch();
-  function scrollListener() {
-    if (
-      ((html.scrollTop > state.sectionHeight / 2 &&
-        html.scrollTop < state.sectionHeight * 1.5) ||
-        html.scrollTop > state.sectionHeight * 2.75) &&
-      !state.stopTogglingLines
-    ) {
-      dispatch(toggleLines(true));
-      dispatch(stopTogglingLines(true));
-    } else {
-      dispatch(toggleLines(false));
-      dispatch(stopTogglingLines(false));
-    }
-  }
   React.useEffect(() => {
     let mounted = true;
+    function scrollListener() {
+      if (
+        ((html.scrollTop > state.sectionHeight / 2 &&
+          html.scrollTop < state.sectionHeight * 1.5) ||
+          html.scrollTop > state.sectionHeight * 2.75) &&
+        !state.stopTogglingLines
+      ) {
+        dispatch(toggleLines(true));
+        dispatch(stopTogglingLines(true));
+      } else {
+        dispatch(toggleLines(false));
+        dispatch(stopTogglingLines(false));
+      }
+    }
     animateBackdropTextChange();
-    dispatch(changeBackdropText("Adebola"));
+    if (state.backdropText !== "Adebola")
+      dispatch(changeBackdropText("Adebola"));
     window.addEventListener("scroll", scrollListener);
     return () => {
       if (!mounted) window.removeEventListener("scroll", scrollListener);
     };
-  }, []);
+  }, [dispatch]);
   return (
     <main id="home" className="page">
       <HomeBanner />

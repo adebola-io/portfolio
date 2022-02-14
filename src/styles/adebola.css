@@ -202,7 +202,7 @@ footer .footer-links li {
   --bgTransform: translateY(100%);
   --tagColor: gray;
   color: white;
-  transition-duration: var(--color_shift_transition_duration);
+  transition-duration: 400ms;
   background-image: linear-gradient(35deg, #292828, #221f1f);
   text-decoration: none;
   overflow: hidden;
@@ -216,6 +216,7 @@ footer .footer-links li {
   --bgTransform: none;
   --filter: none;
   --tagColor: var(--secColor);
+  transform: scale(0.95);
 }
 .featured-work::before {
   position: absolute;
@@ -309,10 +310,11 @@ footer .footer-links li {
 #info div {
   overflow: hidden;
   height: fit-content;
-  width: 45%;
+  width: 48%;
 }
 #info div p {
   width: 100%;
+  font-size: 16pt;
   text-align: end;
   transition-duration: 750ms;
 }
@@ -358,8 +360,8 @@ section {
 section > .content {
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   width: 90%;
   height: 100%;
   padding: 0 5%;
@@ -503,16 +505,16 @@ section > .content {
     --themeColor: #3244ac;
   }
   20%, 80% {
-    --themeColor: #156ca7;
+    --themeColor: #6515a7;
   }
   30%, 70% {
     --themeColor: #585acc;
   }
   40%, 60% {
-    --themeColor: #31c6e09a;
+    --themeColor: #31e07a9a;
   }
   50% {
-    --themeColor: #5fd687;
+    --themeColor: #298d1b;
   }
   100% {
     --themeColor: var(--themeColor);
@@ -611,4 +613,4 @@ main {
   flex-direction: column;
 }
 
-/*# sourceMappingURL=training-heights.css.map */
+/*# sourceMappingURL=adebola.css.map */

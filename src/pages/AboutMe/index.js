@@ -8,7 +8,7 @@ const AboutMe = () => {
   React.useEffect(() => {
     animateBackdropTextChange();
     dispatch(changeBackdropText("About"));
-  }, []);
+  }, [dispatch]);
   return <main></main>;
 };
 
