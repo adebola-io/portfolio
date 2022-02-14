@@ -19,7 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "watch-sass": "sass --watch ./src/styles/scss/training-heights.app.scss:./src/styles/training-heights.css",
+    "watch-sass": "sass --watch ./src/styles/scss/adebola.app.scss:./src/styles/adebola.css",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

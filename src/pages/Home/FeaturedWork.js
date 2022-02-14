@@ -8,11 +8,7 @@ import { works } from "../../data";
 
 const FeaturedWorks = () => {
   const reference = React.useRef(null);
-  function listen() {
-    whenInView(reference.current, () => {
-      console.log(9);
-    });
-  }
+  function listen() {}
   React.useEffect(() => {
     let mounted = true;
     window.addEventListener("scroll", listen);

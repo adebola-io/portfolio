@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home/index";
 import AllWorks from "./pages/AllWorks/index";
 import AboutMe from "./pages/AboutMe";
-import "./styles/training-heights.css";
+import "./styles/adebola.css";
 
 const Adebola = () => {
   const delay = useDelay(3400);
