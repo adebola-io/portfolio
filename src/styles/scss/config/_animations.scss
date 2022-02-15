@@ -1,86 +1,100 @@
-@keyframes start_message_p {
-  0% {
-    transform: translateX(150%);
-    opacity: 0;
+:root {
+  @keyframes start_message_p {
+    0% {
+      transform: translateX(150%);
+      opacity: 0;
+    }
+    70% {
+      transform: none;
+      opacity: 1;
+    }
+    90%,
+    100% {
+      transform: translateX(-200%);
+      opacity: 0;
+    }
   }
-  70% {
-    transform: none;
-    opacity: 1;
+  @keyframes start_secondary_bg {
+    0%,
+    70% {
+      transform: none;
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
-  90%,
-  100% {
-    transform: translateX(-200%);
-    opacity: 0;
+  @keyframes start_secondary_inner {
+    0%,
+    70% {
+      transform: none;
+    }
+    80% {
+      transform: scaleX(1.5);
+    }
+    100% {
+      transform: none;
+    }
   }
-}
-@keyframes start_secondary_bg {
-  0%,
-  70% {
-    transform: none;
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 
-@keyframes page {
-  0% {
-    opacity: 0;
+  @keyframes page {
+    0% {
+      opacity: 0;
+    }
   }
-}
 
-@keyframes backdroptxt {
-  0% {
-    transform: translate(-50%);
-    opacity: 0;
+  @keyframes backdroptxt {
+    0% {
+      transform: translate(-50%);
+      opacity: 0;
+    }
   }
-}
 
-@keyframes header {
-  0% {
-    transform: translateY(-100%);
+  @keyframes header {
+    0% {
+      transform: translateY(-100%);
+    }
   }
-}
-@keyframes heading {
-  0% {
-    transform: translateY(100%);
+  @keyframes heading {
+    0% {
+      transform: translateY(100%);
+    }
   }
-}
-@keyframes heading_info {
-  0% {
-    transform: translateX(-30%);
-    opacity: 0;
+  @keyframes heading_info {
+    0% {
+      transform: translateX(-30%);
+      opacity: 0;
+    }
   }
-}
-@keyframes heading_button {
-  0% {
-    opacity: 0;
+  @keyframes heading_button {
+    0% {
+      opacity: 0;
+    }
   }
-}
-@keyframes color_shift {
-  0% {
-    --themeColor: var(--themeColor);
-  }
-  10%,
-  90% {
-    --themeColor: #6b2ece;
-  }
-  20%,
-  80% {
-    --themeColor: #4625bb;
-  }
-  30%,
-  70% {
-    --themeColor: #585acc;
-  }
-  40%,
-  60% {
-    --themeColor: #3476d8;
-  }
-  50% {
-    --themeColor: #07859b;
-  }
-  100% {
-    --themeColor: var(--themeColor);
+  @keyframes color_shift {
+    0% {
+      --themeColor: var(--themeColor);
+    }
+    10%,
+    90% {
+      --themeColor: #6b2ece;
+    }
+    20%,
+    80% {
+      --themeColor: #4625bb;
+    }
+    30%,
+    70% {
+      --themeColor: #585acc;
+    }
+    40%,
+    60% {
+      --themeColor: #3476d8;
+    }
+    50% {
+      --themeColor: #07859b;
+    }
+    100% {
+      --themeColor: var(--themeColor);
+    }
   }
 }

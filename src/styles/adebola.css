@@ -27,7 +27,8 @@
 .start .start-message .start-secondary-bg .start-secondary-inner {
   height: 100%;
   width: 50%;
-  background-color: var(--themeColor);
+  background-color: #22034b;
+  animation: start_secondary_inner 3800ms;
 }
 
 .header {
@@ -81,13 +82,6 @@ footer .footer-links a {
 footer .footer-links li {
   list-style: none;
   margin-left: 19px;
-}
-
-.stars-container {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: red;
 }
 
 .lines {
@@ -497,6 +491,17 @@ section > .content {
     transform: translateX(-100%);
   }
 }
+@keyframes start_secondary_inner {
+  0%, 70% {
+    transform: none;
+  }
+  80% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    transform: none;
+  }
+}
 @keyframes page {
   0% {
     opacity: 0;
@@ -552,6 +557,7 @@ section > .content {
     --themeColor: var(--themeColor);
   }
 }
+
 /*
 * This is the base SCSS file for your app.
 */

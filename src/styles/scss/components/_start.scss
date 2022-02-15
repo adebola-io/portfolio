@@ -25,7 +25,8 @@
       .start-secondary-inner {
         height: 100%;
         width: 50%;
-        background-color: var(--themeColor);
+        background-color: rgb(34, 3, 75);
+        animation: start_secondary_inner $start_message + 800 + ms;
       }
     }
   }
