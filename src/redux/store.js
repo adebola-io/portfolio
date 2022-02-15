@@ -21,6 +21,12 @@ const reducer = function (
         ...state,
         headerColor: action.payload ? "var(--mainTheme)" : "transparent",
       };
+    case "RESIZE_WINDOW":
+      return {
+        ...state,
+        sectionHeight:
+          window.innerHeight - 65 > 900 ? 900 : window.innerHeight - 65,
+      };
     case "NAVIGATE_TO":
       return {
         ...state,

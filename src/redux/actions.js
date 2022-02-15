@@ -1,3 +1,9 @@
+export function resizeWindow() {
+  return {
+    type: "RESIZE_WINDOW",
+  };
+}
+
 export function updateHeaderColor(payload) {
   return {
     type: "UPDATE_HEADER_COLOR",

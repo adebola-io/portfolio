@@ -38,12 +38,7 @@
   text-decoration: none;
   overflow: hidden;
   &s-heading {
-    font-family: Candara, sans-serif;
     transition-duration: 750ms;
-    &.hide-featured-works-heading {
-      transform: translate(-10%);
-      opacity: 0;
-    }
   }
   &:hover {
     color: var(--secColor);
@@ -84,13 +79,11 @@
   h1 {
     margin-bottom: 0;
     font-size: 25pt;
-    font-family: Lato, Tahoma, Geneva, Verdana, sans-serif;
   }
   p {
     margin-top: 7%;
     margin-right: 10%;
     font-size: 10pt;
-    font-family: sans-serif;
     line-height: 18px;
   }
   ul {

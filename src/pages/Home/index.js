@@ -23,7 +23,7 @@ const Home = () => {
           () => {
             element("#info div p").classList.remove("hidden");
           },
-          state.sectionHeight / 4
+          state.sectionHeight / 3
         );
       }
     }
@@ -40,17 +40,20 @@ const Home = () => {
                 elementAll(".featured-work").forEach((elem, index) => {
                   elem.animate(
                     [
-                      { opacity: "0", transform: "translateY(50%)" },
+                      { opacity: "0", transform: "translate(-10%, 50%)" },
                       {
                         opacity: "1",
-                        transform: "none",
-                        transitionDuration: "400ms",
                       },
                     ],
                     {
                       duration: (index + 1) * 200,
-                      fill: "forwards",
-                      direction: "normal",
+                      _fill: "forwards",
+                      get fill() {
+                        return this._fill;
+                      },
+                      set fill(value) {
+                        this._fill = value;
+                      },
                     }
                   );
                 });
@@ -58,18 +61,39 @@ const Home = () => {
               featured = true;
             }
           },
-          state.sectionHeight / 2
+          state.sectionHeight / 3
         );
       }
     }
     function checkViewforContact() {
       if (element("#contactme h1")) {
-        whenInView(element("#contactme h1"), () => {
-          if (!contactIsViewed) {
-            element("#contactme h1").classList.remove("hide-contact-heading");
-            contactIsViewed = true;
-          }
-        });
+        whenInView(
+          element("#contactme h1"),
+          () => {
+            if (!contactIsViewed) {
+              element("#contactme h1").classList.remove(
+                "hide-contact-heading1"
+              );
+              element("#contactme h2").classList.remove(
+                "hide-contact-heading2"
+              );
+              elementAll("#contactme ul li").forEach((elem, index) => {
+                elem.animate(
+                  [
+                    { transform: "translateX(100%)", opacity: "0" },
+                    { opacity: "1" },
+                  ],
+                  {
+                    duration: (index + 1) * 500,
+                    fill: "forwards",
+                  }
+                );
+              });
+              contactIsViewed = true;
+            }
+          },
+          state.sectionHeight / 3
+        );
       }
     }
     checkViewforInfo();

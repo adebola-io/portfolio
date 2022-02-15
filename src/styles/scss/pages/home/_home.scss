@@ -37,7 +37,6 @@ section > .content {
   width: 60%;
   margin-bottom: 4px;
   font-size: 50pt;
-  font-family: "Work Sans", Lato, Candara, sans-serif;
   animation: heading $home_page_animation_speed + ms;
   @media (max-width: 1024px) {
     width: 80%;
@@ -55,7 +54,6 @@ section > .content {
   width: 45%;
   margin-top: 0;
   font-size: 13pt;
-  font-family: sans-serif;
   animation: heading_info $home_page_animation_speed + ms;
   @media (max-width: 425px) {
     width: 75%;
@@ -79,6 +77,7 @@ section > .content {
   animation: heading_button $home_page_animation_speed + ms;
   span {
     z-index: 1;
+    transition-duration: 0;
   }
   &::before {
     position: absolute;
@@ -91,7 +90,7 @@ section > .content {
     background-color: var(--themeColor);
   }
   &:hover {
-    color: white;
+    color: black;
     --btBgTransform: none;
     // transform: scale(1.05);
   }

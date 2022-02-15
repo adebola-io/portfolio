@@ -93,15 +93,21 @@ export const contacts = [
     name: "Twitter",
     link: "http://",
     logo: require("../assets/images/logos/twitter.png"),
+    imgFilter: "saturate(0) brightness(2)",
+    footerImgFilter: "saturate(0) brightness(0.5)",
   },
   {
     name: "Github",
     link: "http://",
     logo: require("../assets/images/logos/github.png"),
+    imgFilter: "saturate(0) brightness(2)",
+    footerImgFilter: "saturate(0) brightness(0.5)",
   },
   {
     name: "LinkedIn",
     link: "http://",
     logo: require("../assets/images/logos/linkedin.png"),
+    imgFilter: "saturate(0) invert(1) brightness(2)",
+    footerImgFilter: "saturate(0) opacity(0.25) invert(1)",
   },
 ];

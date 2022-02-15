@@ -83,6 +83,9 @@ footer .footer-links li {
   list-style: none;
   margin-left: 19px;
 }
+footer .footer-links li img {
+  height: 30px;
+}
 
 .lines {
   position: fixed;
@@ -101,7 +104,6 @@ footer .footer-links li {
   --oldTranslateY: 31%;
   --newTranslateY: 125%;
   transform: rotate(45deg) translate(0, var(--translateY));
-  animation: home_line;
   animation-duration: 600ms;
 }
 .lines.line-2 {
@@ -109,7 +111,6 @@ footer .footer-links li {
   --oldTranslateY: 35%;
   --newTranslateY: 113%;
   transform: rotate(45deg) translate(2090%, var(--translateY));
-  animation: home_line;
   animation-duration: 600ms;
 }
 .lines.line-3 {
@@ -118,7 +119,6 @@ footer .footer-links li {
   --oldTranslateY: -16%;
   --newTranslateY: -115%;
   transform: rotate(-45deg) translate(-4007%, var(--translateY));
-  animation: home_line;
   animation-duration: 600ms;
 }
 .lines.line-4 {
@@ -126,7 +126,6 @@ footer .footer-links li {
   --oldTranslateY: 29%;
   --newTranslateY: -55%;
   transform: rotate(45deg) translate(719%, var(--translateY));
-  animation: home_line;
   animation-duration: 600ms;
 }
 .lines.line-5 {
@@ -134,7 +133,6 @@ footer .footer-links li {
   --oldTranslateY: -16%;
   --newTranslateY: 75%;
   transform: rotate(-45deg) translate(-2507%, var(--translateY));
-  animation: home_line;
   animation-duration: 600ms;
 }
 .lines.line-6 {
@@ -213,12 +211,7 @@ footer .footer-links li {
   overflow: hidden;
 }
 .featured-works-heading {
-  font-family: Candara, sans-serif;
   transition-duration: 750ms;
-}
-.featured-works-heading.hide-featured-works-heading {
-  transform: translate(-10%);
-  opacity: 0;
 }
 .featured-work:hover {
   color: var(--secColor);
@@ -258,13 +251,11 @@ footer .footer-links li {
 .featured-work h1 {
   margin-bottom: 0;
   font-size: 25pt;
-  font-family: Lato, Tahoma, Geneva, Verdana, sans-serif;
 }
 .featured-work p {
   margin-top: 7%;
   margin-right: 10%;
   font-size: 10pt;
-  font-family: sans-serif;
   line-height: 18px;
 }
 .featured-work ul {
@@ -319,16 +310,17 @@ footer .footer-links li {
 #info div {
   overflow: hidden;
   height: fit-content;
-  width: 48%;
+  width: 45%;
 }
 #info div p {
   width: 100%;
   font-size: 16pt;
+  font-family: "Work Sans", "Zen Kaku", Lato, Candara, sans-serif;
   text-align: end;
-  transition-duration: 600ms;
+  transition-duration: 500ms;
 }
-
-.hidden {
+#info div p.hidden {
+  transform: translate(25%);
   opacity: 0;
 }
 
@@ -342,16 +334,22 @@ footer .footer-links li {
 #contactme h2 {
   font-size: 20pt;
   margin: 3% 0;
+  transition-duration: 500ms;
+}
+#contactme h2.hide-contact-heading2 {
+  transform: translateY(-100%) rotate(-6deg);
+  opacity: 0;
 }
 #contactme h1 {
   margin-top: 0;
+  margin-bottom: 25px;
   font-size: 40pt;
   font-family: Lato;
   cursor: pointer;
-  transition-duration: 300ms;
+  transition-duration: 500ms;
 }
-#contactme h1.hide-contact-heading {
-  transform: translateY(-50%);
+#contactme h1.hide-contact-heading1 {
+  transform: translateY(-100%) rotate(-6deg);
   opacity: 0;
 }
 #contactme h1:hover {
@@ -369,8 +367,11 @@ footer .footer-links li {
 }
 #contactme ul li {
   list-style: none;
+  opacity: 0;
 }
 #contactme ul li a {
+  --imgFilterContainer: saturate(0) brightness(2);
+  --imgFilter: var(--imgFilterContainer);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -382,14 +383,13 @@ footer .footer-links li {
 }
 #contactme ul li a:hover {
   transform: scale(1.05);
+  --imgFilter: none;
 }
 #contactme ul li a img {
   height: 55px;
   margin-bottom: 10px;
-  filter: saturate(0) brightness(2);
-}
-#contactme ul li a img[alt=LinkedIn-logo] {
-  filter: invert(1) saturate(0);
+  transition-duration: 500ms;
+  filter: var(--imgFilter);
 }
 
 section {
@@ -429,7 +429,6 @@ section > .content {
   width: 60%;
   margin-bottom: 4px;
   font-size: 50pt;
-  font-family: "Work Sans", Lato, Candara, sans-serif;
   animation: heading 600ms;
 }
 @media (max-width: 1024px) {
@@ -452,7 +451,6 @@ section > .content {
   width: 45%;
   margin-top: 0;
   font-size: 13pt;
-  font-family: sans-serif;
   animation: heading_info 600ms;
 }
 @media (max-width: 425px) {
@@ -480,6 +478,7 @@ section > .content {
 }
 .heading-button span {
   z-index: 1;
+  transition-duration: 0;
 }
 .heading-button::before {
   position: absolute;
@@ -492,7 +491,7 @@ section > .content {
   background-color: var(--themeColor);
 }
 .heading-button:hover {
-  color: white;
+  color: black;
   --btBgTransform: none;
 }
 
@@ -571,19 +570,19 @@ section > .content {
     --themeColor: var(--themeColor);
   }
   10%, 90% {
-    --themeColor: #6b2ece;
+    --themeColor: #7c2ab3;
   }
   20%, 80% {
-    --themeColor: #4625bb;
+    --themeColor: #47bd8c;
   }
   30%, 70% {
-    --themeColor: #585acc;
+    --themeColor: #c2ba4c;
   }
   40%, 60% {
-    --themeColor: #3476d8;
+    --themeColor: #2377f5;
   }
   50% {
-    --themeColor: #07859b;
+    --themeColor: #c9699e;
   }
   100% {
     --themeColor: var(--themeColor);
@@ -613,11 +612,15 @@ section > .content {
   font-family: "Work Sans";
   src: url("../assets/fonts/Work_Sans/static/WorkSans-Regular.ttf");
 }
+@font-face {
+  font-family: "Zen Kaku";
+  src: url("../assets/fonts/Zen_Kaku_Gothic_Antique/ZenKakuGothicAntique-Regular.ttf");
+}
 :root {
   --mainTheme: #141414;
   --mainThemeInv: white;
-  --themeColor: #374ce9;
-  --color_shift_transition_duration: 1000ms;
+  --themeColor: #6108aa;
+  --color_shift_transition_duration: 1250ms;
 }
 
 html {
@@ -634,13 +637,12 @@ body {
   margin: 0;
   background-color: var(--mainTheme);
   box-sizing: border-box;
-  font-family: Candara, sans-serif;
 }
 
 .app {
   color: var(--mainThemeInv);
-  font-family: sans-serif;
-  animation: color_shift 30000ms infinite;
+  font-family: "Work Sans", "Zen Kaku", Lato, Candara, sans-serif;
+  animation: color_shift 40000ms infinite;
   overflow-x: hidden;
 }
 
@@ -662,6 +664,7 @@ main {
   width: 100vw;
   color: #252525;
   font-size: 40vw;
+  font-family: sans-serif;
   overflow: hidden;
 }
 .backdrop span {

@@ -7,15 +7,21 @@
   h2 {
     font-size: 20pt;
     margin: 3% 0;
+    transition-duration: 500ms;
+    &.hide-contact-heading2 {
+      transform: translateY(-100%) rotate(-6deg);
+      opacity: 0;
+    }
   }
   h1 {
     margin-top: 0;
+    margin-bottom: 25px;
     font-size: 40pt;
     font-family: Lato;
     cursor: pointer;
-    transition-duration: 300ms;
-    &.hide-contact-heading {
-      transform: translateY(-50%);
+    transition-duration: 500ms;
+    &.hide-contact-heading1 {
+      transform: translateY(-100%) rotate(-6deg);
       opacity: 0;
     }
     &:hover {
@@ -33,7 +39,10 @@
     padding: 0;
     li {
       list-style: none;
+      opacity: 0;
       a {
+        --imgFilterContainer: saturate(0) brightness(2);
+        --imgFilter: var(--imgFilterContainer);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -44,14 +53,13 @@
         transition-duration: 200ms;
         &:hover {
           transform: scale(1.05);
+          --imgFilter: none;
         }
         img {
           height: 55px;
           margin-bottom: 10px;
-          filter: saturate(0) brightness(2);
-          &[alt="LinkedIn-logo"] {
-            filter: invert(1) saturate(0);
-          }
+          transition-duration: 500ms;
+          filter: var(--imgFilter);
         }
       }
     }

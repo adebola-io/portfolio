@@ -1,26 +1,34 @@
 import React from "react";
+import { contacts } from "../data";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <p className="copyright">&copy; Adebola Akomolafe, 2021.</p>
+      <p className="copyright">
+        &copy; Adebola Akomolafe, {new Date().getFullYear()}.
+      </p>
       <ul className="footer-links">
-        <FtrLink name="Github" />
-        <FtrLink name="LinkedIn" />
-        <FtrLink name="Twitter" />
+        {contacts.map((contact, index) => {
+          return (
+            <li key={index}>
+              <a href={contact.link}>
+                <img
+                  className="footer-link"
+                  src={contact.logo.default}
+                  alt={contact.name}
+                  style={{ filter: contact.footerImgFilter }}
+                />
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </footer>
   );
 };
 
 const FtrLink = (props) => {
-  return (
-    <li>
-      <a href={props.to}>
-        <img className="footer-link" src={props.logo} alt={props.name} />
-      </a>
-    </li>
-  );
+  return <></>;
 };
 
 export default Footer;
