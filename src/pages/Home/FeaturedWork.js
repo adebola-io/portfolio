@@ -12,7 +12,9 @@ const FeaturedWorks = () => {
   return (
     <section id="featured-works">
       <div className="content">
-        <h1 className="featured-works-heading">Featured Works</h1>
+        <h1 className="featured-works-heading hide-featured-works-heading">
+          Featured Works
+        </h1>
         <div ref={reference} className="featured-works-container">
           {featuredWorks.map((featuredWork, index) => {
             return (

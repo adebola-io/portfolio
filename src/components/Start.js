@@ -10,7 +10,9 @@ const Start = () => {
         <div className="fc start-main-bg">
           <p>Hi there.</p>
         </div>
-        <div className="start-secondary-bg"></div>
+        <div className="start-secondary-bg">
+          <div className="start-secondary-inner"></div>
+        </div>
       </div>
     </div>
   );

@@ -28,6 +28,7 @@
 html {
   scroll-behavior: smooth;
   &::-webkit-scrollbar {
+    // display: none;
     background-color: var(--mainTheme);
   }
   &::-webkit-scrollbar-thumb {
@@ -56,6 +57,7 @@ main {
 
 .backdrop {
   position: fixed;
+  top: 0;
   z-index: -3;
   display: flex;
   align-items: center;

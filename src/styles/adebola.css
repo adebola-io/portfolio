@@ -2,26 +2,32 @@
   overflow: hidden;
 }
 .start .start-message {
-  width: 200%;
+  width: 300%;
 }
 .start .start-message .start-main-bg {
   height: 100%;
-  width: 50%;
+  width: 33.3333%;
   background-color: var(--mainThemeInv);
 }
 .start .start-message .start-main-bg p {
   margin: 0;
   font-weight: bold;
-  font-size: 20pt;
+  font-size: 30pt;
+  font-family: Lato, "Segoe UI", sans-serif;
   color: var(--mainTheme);
   animation: start_message_p 3000ms;
 }
 .start .start-message .start-secondary-bg {
   height: 100%;
-  width: 50%;
+  width: 66.6666%;
   background: var(--mainTheme);
   transform: translate(-100%);
   animation: start_secondary_bg 3400ms;
+}
+.start .start-message .start-secondary-bg .start-secondary-inner {
+  height: 100%;
+  width: 50%;
+  background-color: var(--themeColor);
 }
 
 .header {
@@ -203,6 +209,7 @@ footer .footer-links li {
   flex-direction: column;
   min-height: 200px;
   max-height: 400px;
+  opacity: 0;
   --filter: var(--imgFilter);
   --bgTransform: translateY(100%);
   --tagColor: gray;
@@ -214,6 +221,11 @@ footer .footer-links li {
 }
 .featured-works-heading {
   font-family: Candara, sans-serif;
+  transition-duration: 750ms;
+}
+.featured-works-heading.hide-featured-works-heading {
+  transform: translate(-10%);
+  opacity: 0;
 }
 .featured-work:hover {
   color: var(--secColor);
@@ -221,7 +233,6 @@ footer .footer-links li {
   --bgTransform: none;
   --filter: none;
   --tagColor: var(--secColor);
-  transform: scale(0.95);
 }
 .featured-work::before {
   position: absolute;
@@ -326,7 +337,6 @@ footer .footer-links li {
 
 .hidden {
   opacity: 0;
-  transform: translateX(10%);
 }
 
 #contactme {
@@ -386,7 +396,7 @@ section > .content {
 
 .hide-banner {
   opacity: 0;
-  transform: scale(0.9) translateY(-10%);
+  transform: scale(0.5) translateY(-10%);
 }
 
 .home-heading-container {
@@ -524,16 +534,16 @@ section > .content {
     --themeColor: var(--themeColor);
   }
   10%, 90% {
-    --themeColor: #3244ac;
+    --themeColor: #6b2ece;
   }
   20%, 80% {
-    --themeColor: #6515a7;
+    --themeColor: #4625bb;
   }
   30%, 70% {
     --themeColor: #585acc;
   }
   40%, 60% {
-    --themeColor: #319ae09a;
+    --themeColor: #3476d8;
   }
   50% {
     --themeColor: #07859b;
@@ -594,6 +604,7 @@ main {
 
 .backdrop {
   position: fixed;
+  top: 0;
   z-index: -3;
   display: flex;
   align-items: center;

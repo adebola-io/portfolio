@@ -28,6 +28,7 @@
   flex-direction: column;
   min-height: 200px;
   max-height: 400px;
+  opacity: 0;
   --filter: var(--imgFilter);
   --bgTransform: translateY(100%);
   --tagColor: gray;
@@ -38,6 +39,11 @@
   overflow: hidden;
   &s-heading {
     font-family: Candara, sans-serif;
+    transition-duration: 750ms;
+    &.hide-featured-works-heading {
+      transform: translate(-10%);
+      opacity: 0;
+    }
   }
   &:hover {
     color: var(--secColor);
@@ -45,7 +51,7 @@
     --bgTransform: none;
     --filter: none;
     --tagColor: var(--secColor);
-    transform: scale(0.95);
+    // transform: scale(0.95);
   }
   &::before {
     position: absolute;
