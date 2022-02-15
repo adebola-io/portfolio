@@ -10,11 +10,23 @@
 
 @font-face {
   font-family: Candara;
-  src: url("../assets/fonts/CANDARA.TTF");
+  src: url("../assets/fonts/Candara/CANDARA.TTF");
 }
 @font-face {
   font-family: Lato;
-  src: url(../assets/fonts/Lato-Regular.ttf);
+  src: url("../assets/fonts/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../assets/fonts/Work_Sans/static/WorkSans-Regular.ttf");
 }
 :root {
   --mainTheme: #141414;

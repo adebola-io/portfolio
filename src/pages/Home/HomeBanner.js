@@ -5,10 +5,7 @@ import { useSelector } from "react-redux";
 const HomeBanner = () => {
   const state = useSelector((state) => state);
   return (
-    <section
-      id="home-banner"
-      style={{height: `${state.sectionHeight}px`}}
-    >
+    <section id="home-banner" style={{ height: `${state.sectionHeight}px` }}>
       <div className="overlay"></div>
       <div className="content">
         <div className="home-heading-container">
@@ -20,7 +17,11 @@ const HomeBanner = () => {
           Welcome! You've reached the page of Adebola Akomolafe, a front-end web
           developer from Lagos, Nigeria.
         </p>
-        <Link className="heading-button contact-me" to="/contact-me">
+        <Link
+          aria-label="contact_me"
+          className="heading-button contact-me"
+          to="/contact-me"
+        >
           <span>Contact Me</span>
         </Link>
       </div>

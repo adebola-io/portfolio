@@ -42,6 +42,12 @@
     }
   }
 
+  @keyframes home_line {
+    0% {
+      transform: none;
+    }
+  }
+
   @keyframes backdroptxt {
     0% {
       transform: translate(-50%);

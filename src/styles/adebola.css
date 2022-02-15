@@ -96,12 +96,12 @@ footer .footer-links li {
   transition: var(--color_shift_transition_duration);
   --translateY: var(--oldTranslateY);
   background-color: var(--themeColor);
-  animation: home_line 600ms;
 }
 .lines.line-1 {
   --oldTranslateY: 31%;
   --newTranslateY: 125%;
   transform: rotate(45deg) translate(0, var(--translateY));
+  animation: home_line;
   animation-duration: 600ms;
 }
 .lines.line-2 {
@@ -109,7 +109,8 @@ footer .footer-links li {
   --oldTranslateY: 35%;
   --newTranslateY: 113%;
   transform: rotate(45deg) translate(2090%, var(--translateY));
-  animation-duration: 750ms;
+  animation: home_line;
+  animation-duration: 600ms;
 }
 .lines.line-3 {
   height: 134%;
@@ -117,21 +118,24 @@ footer .footer-links li {
   --oldTranslateY: -16%;
   --newTranslateY: -115%;
   transform: rotate(-45deg) translate(-4007%, var(--translateY));
-  animation-duration: 900ms;
+  animation: home_line;
+  animation-duration: 600ms;
 }
 .lines.line-4 {
   height: 114%;
   --oldTranslateY: 29%;
   --newTranslateY: -55%;
   transform: rotate(45deg) translate(719%, var(--translateY));
-  animation-duration: 1050ms;
+  animation: home_line;
+  animation-duration: 600ms;
 }
 .lines.line-5 {
   height: 134%;
   --oldTranslateY: -16%;
   --newTranslateY: 75%;
   transform: rotate(-45deg) translate(-2507%, var(--translateY));
-  animation-duration: 1200ms;
+  animation: home_line;
+  animation-duration: 600ms;
 }
 .lines.line-6 {
   left: 0;
@@ -139,7 +143,6 @@ footer .footer-links li {
   --oldTranslateY: -55%;
   --newTranslateY: 30%;
   transform: rotate(-45deg) translate(0%, var(--translateY));
-  animation-duration: 1350ms;
 }
 .lines.line-7 {
   left: 0;
@@ -147,28 +150,24 @@ footer .footer-links li {
   --oldTranslateY: 159%;
   --newTranslateY: 30%;
   transform: rotate(-45deg) translate(1671%, var(--translateY));
-  animation-duration: 1350ms;
 }
 .lines.line-8 {
   left: 0;
   --oldTranslateY: -100%;
   --newTranslateY: 0%;
   transform: rotate(45deg) translate(0%, var(--translateY));
-  animation-duration: 600ms;
 }
 .lines.line-9 {
   left: 0;
   --oldTranslateY: 100%;
   --newTranslateY: 0%;
   transform: rotate(45deg) translate(2000%, var(--translateY));
-  animation-duration: 600ms;
 }
 .lines.line-10 {
   left: 0;
   --oldTranslateY: 100%;
   --newTranslateY: 0%;
   transform: rotate(45deg) translate(-2000%, var(--translateY));
-  animation-duration: 600ms;
 }
 
 .featured-works-container {
@@ -334,6 +333,7 @@ footer .footer-links li {
 }
 
 #contactme {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -350,6 +350,10 @@ footer .footer-links li {
   cursor: pointer;
   transition-duration: 300ms;
 }
+#contactme h1.hide-contact-heading {
+  transform: translateY(-50%);
+  opacity: 0;
+}
 #contactme h1:hover {
   color: var(--themeColor);
   transform: scale(1.05);
@@ -359,11 +363,33 @@ footer .footer-links li {
 }
 #contactme ul {
   display: flex;
+  justify-content: space-around;
+  width: 40%;
   padding: 0;
 }
 #contactme ul li {
   list-style: none;
-  margin-right: 10px;
+}
+#contactme ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  font-family: Lato;
+  transition-duration: 200ms;
+}
+#contactme ul li a:hover {
+  transform: scale(1.05);
+}
+#contactme ul li a img {
+  height: 55px;
+  margin-bottom: 10px;
+  filter: saturate(0) brightness(2);
+}
+#contactme ul li a img[alt=LinkedIn-logo] {
+  filter: invert(1) saturate(0);
 }
 
 section {
@@ -403,7 +429,7 @@ section > .content {
   width: 60%;
   margin-bottom: 4px;
   font-size: 50pt;
-  font-family: Lato, Candara, sans-serif;
+  font-family: "Work Sans", Lato, Candara, sans-serif;
   animation: heading 600ms;
 }
 @media (max-width: 1024px) {
@@ -417,6 +443,7 @@ section > .content {
   }
 }
 .home-heading span {
+  font-size: 43pt;
   transition-duration: var(--color_shift_transition_duration);
   color: var(--themeColor);
 }
@@ -507,6 +534,11 @@ section > .content {
     opacity: 0;
   }
 }
+@keyframes home_line {
+  0% {
+    transform: none;
+  }
+}
 @keyframes backdroptxt {
   0% {
     transform: translate(-50%);
@@ -563,11 +595,23 @@ section > .content {
 */
 @font-face {
   font-family: Candara;
-  src: url("../assets/fonts/CANDARA.TTF");
+  src: url("../assets/fonts/Candara/CANDARA.TTF");
 }
 @font-face {
   font-family: Lato;
-  src: url(../assets/fonts/Lato-Regular.ttf);
+  src: url("../assets/fonts/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../assets/fonts/Work_Sans/static/WorkSans-Regular.ttf");
 }
 :root {
   --mainTheme: #141414;

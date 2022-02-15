@@ -14,6 +14,7 @@ const Home = () => {
     let bannerisHidden = false,
       lineState = 1,
       featured = false,
+      contactIsViewed = false,
       mounted = true;
     function checkViewforInfo() {
       if (element("#info div p")) {
@@ -42,7 +43,7 @@ const Home = () => {
                       { opacity: "0", transform: "translateY(50%)" },
                       {
                         opacity: "1",
-                        transform: undefined,
+                        transform: "none",
                         transitionDuration: "400ms",
                       },
                     ],
@@ -61,8 +62,19 @@ const Home = () => {
         );
       }
     }
+    function checkViewforContact() {
+      if (element("#contactme h1")) {
+        whenInView(element("#contactme h1"), () => {
+          if (!contactIsViewed) {
+            element("#contactme h1").classList.remove("hide-contact-heading");
+            contactIsViewed = true;
+          }
+        });
+      }
+    }
     checkViewforInfo();
     checkViewforFeatured();
+    checkViewforContact();
     function scrollListener() {
       checkViewforInfo();
 
@@ -149,7 +161,11 @@ const Home = () => {
         }
       }
 
+      // FEATURED WORKS ANIMATION
       checkViewforFeatured();
+
+      // CONTACT ANIMATION
+      checkViewforContact();
     }
     window.addEventListener("scroll", scrollListener);
     return () => {

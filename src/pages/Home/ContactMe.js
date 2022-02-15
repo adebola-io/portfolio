@@ -6,10 +6,17 @@ const ContactMe = (props) => {
     <section id="contactme" style={{ height: props.height }}>
       <h2>Ready to Get Started?</h2>
       <p>Reach me at:</p>
-      <h1>adebolaakomolafe@gmail.com</h1>
+      <h1 className="hide-contact-heading">adebolaakomolafe@gmail.com</h1>
       <ul className="reach-me">
         {contacts.map((contact, index) => {
-          return <li key={index}>{contact.name}</li>;
+          return (
+            <li key={index}>
+              <a href="/if">
+                <img src={contact.logo.default} alt={`${contact.name}-logo`} />
+                <span>{contact.name}</span>
+              </a>
+            </li>
+          );
         })}
       </ul>
     </section>

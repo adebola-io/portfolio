@@ -37,7 +37,7 @@ section > .content {
   width: 60%;
   margin-bottom: 4px;
   font-size: 50pt;
-  font-family: Lato, Candara, sans-serif;
+  font-family: "Work Sans", Lato, Candara, sans-serif;
   animation: heading $home_page_animation_speed + ms;
   @media (max-width: 1024px) {
     width: 80%;
@@ -46,6 +46,7 @@ section > .content {
     font-size: 35pt;
   }
   span {
+    font-size: 43pt;
     transition-duration: var(--color_shift_transition_duration);
     color: var(--themeColor);
   }

@@ -89,7 +89,19 @@ export const works = [
 // ];
 
 export const contacts = [
-  { name: "Twitter", link: "http://" },
-  { name: "Github", link: "http://" },
-  { name: "LinkedIn", link: "http://" },
+  {
+    name: "Twitter",
+    link: "http://",
+    logo: require("../assets/images/logos/twitter.png"),
+  },
+  {
+    name: "Github",
+    link: "http://",
+    logo: require("../assets/images/logos/github.png"),
+  },
+  {
+    name: "LinkedIn",
+    link: "http://",
+    logo: require("../assets/images/logos/linkedin.png"),
+  },
 ];
