@@ -29,25 +29,24 @@
     }
   }
 }
-.hide-features {
-  opacity: 0;
-  transform: translateY(10%);
-}
 .featured-work {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 200px;
   max-height: 400px;
-  opacity: 0;
   --filter: var(--imgFilter);
   --bgTransform: translateY(100%);
   --tagColor: gray;
   color: white;
-  transition-duration: 400ms;
+  transition-duration: 750ms;
   background-image: linear-gradient(35deg, #292828, #221f1f);
   text-decoration: none;
   overflow: hidden;
+  &.hide-featured-work {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
   @media (max-width: 768px) {
     width: 95%;
     max-height: 600px;

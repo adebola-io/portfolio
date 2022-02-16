@@ -37,25 +37,8 @@ const Home = () => {
                 "hide-featured-works-heading"
               );
               setTimeout(() => {
-                elementAll(".featured-work").forEach((elem, index) => {
-                  elem.animate(
-                    [
-                      { opacity: "0", transform: "translate(-10%, 50%)" },
-                      {
-                        opacity: "1",
-                      },
-                    ],
-                    {
-                      duration: (index + 1) * 200,
-                      _fill: "forwards",
-                      get fill() {
-                        return this._fill;
-                      },
-                      set fill(value) {
-                        this._fill = value;
-                      },
-                    }
-                  );
+                elementAll(".featured-work").forEach((elem) => {
+                  elem.classList.remove("hide-featured-work");
                 });
               }, 200);
               featured = true;

@@ -82,6 +82,12 @@
       opacity: 0;
     }
   }
+  @keyframes featured {
+    0% {
+      opacity: 0;
+      transform: translateX(50%);
+    }
+  }
   // @keyframes color_shift {
   //   0% {
   //     --themeColor: var(--themeColor);

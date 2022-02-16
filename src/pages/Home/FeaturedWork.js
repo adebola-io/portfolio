@@ -60,7 +60,7 @@ const FeaturedWork = (props) => {
     <Link
       to={`/works/${props.name.toLowerCase()}`}
       style={FeaturedWorkStyle}
-      className="featured-work"
+      className="featured-work hide-featured-work"
     >
       <h1>{props.name}</h1>
       <p>{props.info}</p>
