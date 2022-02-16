@@ -4,12 +4,24 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: 600px;
   h2 {
     font-size: 20pt;
     margin: 3% 0;
     transition-duration: 500ms;
+    @media (min-width: 2560px) {
+      font-size: 56pt;
+      transition-duration: 750ms;
+    }
+    @media (max-width: 768px) {
+      margin-top: 30%;
+    }
+    @media (max-width: 425px) {
+      margin-bottom: 6%;
+      font-size: 17pt;
+    }
     &.hide-contact-heading2 {
-      transform: translateY(-100%) rotate(-6deg);
+      transform: translateY(100%) rotate(-6deg);
       opacity: 0;
     }
   }
@@ -20,8 +32,23 @@
     font-family: Lato;
     cursor: pointer;
     transition-duration: 500ms;
+    @media (min-width: 2560px) {
+      font-size: 87pt;
+      transition-duration: 750ms;
+    }
+    @media (max-width: 768px) {
+      margin-top: 5%;
+      font-size: 30pt;
+    }
+    @media (max-width: 425px) {
+      font-size: 21pt;
+      margin-top: 2%;
+    }
+    @media (max-width: 375px) {
+      font-size: 16pt;
+    }
     &.hide-contact-heading1 {
-      transform: translateY(-100%) rotate(-6deg);
+      transform: translateY(100%) rotate(-6deg);
       opacity: 0;
     }
     &:hover {
@@ -31,12 +58,28 @@
   }
   p {
     margin: 0;
+    transition-duration: 500ms;
+    @media (min-width: 2560px) {
+      font-size: 38pt;
+      transition-duration: 750ms;
+    }
+    &.hide-contact-p {
+      transform: translateX(50%) rotate(-6deg);
+      opacity: 0;
+    }
   }
   ul {
     display: flex;
     justify-content: space-around;
     width: 40%;
     padding: 0;
+    @media (min-width: 2560px) {
+      margin-top: 40px;
+      font-size: 24pt;
+    }
+    @media (max-width: 425px) {
+      width: 85%;
+    }
     li {
       list-style: none;
       opacity: 0;
@@ -60,6 +103,12 @@
           margin-bottom: 10px;
           transition-duration: 500ms;
           filter: var(--imgFilter);
+          @media (min-width: 2560px) {
+            height: 120px;
+          }
+          @media (max-width: 768px) {
+            height: 40px;
+          }
         }
       }
     }

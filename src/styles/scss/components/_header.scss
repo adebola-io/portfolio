@@ -11,6 +11,10 @@
   font-size: 13pt;
   animation: header 800ms;
   transition-duration: 700ms;
+  @media (min-width: 2560px) {
+    height: 105px;
+    font-size: 25pt;
+  }
   nav {
     margin-left: auto;
     ul {
@@ -18,6 +22,9 @@
       li {
         list-style: none;
         margin: 0 10px;
+        @media (min-width: 2560px) {
+          margin: 0 23px;
+        }
       }
     }
   }

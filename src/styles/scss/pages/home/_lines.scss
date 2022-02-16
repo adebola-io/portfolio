@@ -10,6 +10,9 @@
   transition: var(--color_shift_transition_duration);
   --translateY: var(--oldTranslateY);
   background-color: var(--themeColor);
+  @media (max-width: 768px) {
+    background-color: #242424;
+  }
   &.line-1 {
     --oldTranslateY: 31%;
     --newTranslateY: 125%;

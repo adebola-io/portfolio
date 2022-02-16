@@ -7,6 +7,10 @@ footer {
   //   background-color: #252525;
   color: gray;
   font-size: 10pt;
+  @media (min-width: 2560px) {
+    height: 150px;
+    font-size: 23pt;
+  }
   .footer-links {
     display: flex;
     margin-left: auto;
@@ -20,6 +24,9 @@ footer {
       margin-left: 19px;
       img {
         height: 30px;
+        @media (min-width: 2560px) {
+          height: 50px;
+        }
       }
     }
   }

@@ -74,6 +74,7 @@ const Home = () => {
               element("#contactme h1").classList.remove(
                 "hide-contact-heading1"
               );
+              element("#contactme p").classList.remove("hide-contact-p");
               element("#contactme h2").classList.remove(
                 "hide-contact-heading2"
               );
@@ -92,7 +93,7 @@ const Home = () => {
               contactIsViewed = true;
             }
           },
-          state.sectionHeight / 3
+          state.sectionHeight / 6
         );
       }
     }
@@ -202,7 +203,7 @@ const Home = () => {
       <HomeBanner />
       <Info />
       <FeaturedWorks />
-      <ContactMe height={`${state.sectionHeight}px`} />
+      <ContactMe />
       <Lines />
     </main>
   );

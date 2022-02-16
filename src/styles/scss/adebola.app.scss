@@ -81,6 +81,9 @@ main {
   font-size: 40vw;
   font-family: sans-serif;
   overflow: hidden;
+  @media (max-width: 425px) {
+    color: #1c1c1c;
+  }
   span {
     transform: translateX(-40%);
     animation: backdroptxt 750ms;

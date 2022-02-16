@@ -1,7 +1,10 @@
+import { element, numerate } from "../utils/func";
+
 const initialState = {
   currentPage: "Home",
   backdropText: "Adebola",
-  sectionHeight: window.innerHeight - 65 > 900 ? 900 : window.innerHeight - 65,
+  sectionHeight:
+    window.innerHeight - numerate > 900 ? 900 : window.innerHeight - 65,
   showFeatured: false,
   linesTranslate: "var(--oldTranslateY)",
   stopTogglingLines: false,
@@ -25,7 +28,15 @@ const reducer = function (
       return {
         ...state,
         sectionHeight:
-          window.innerHeight - 65 > 900 ? 900 : window.innerHeight - 65,
+          window.innerHeight -
+            (element("header") ? numerate(element("header"), "height") : 65) >
+          (element("section")
+            ? numerate(element("section"), "max-height")
+            : 900)
+            ? element("section")
+              ? numerate(element("section"), "max-height")
+              : 900
+            : window.innerHeight - numerate(element("header"), "height"),
       };
     case "NAVIGATE_TO":
       return {
