@@ -36,6 +36,14 @@ const Header = () => {
           </ul>
         </nav> */}
         <button
+          style={{
+            "--beforeTransform": state.sideBarIsOpen
+              ? "rotate(-45deg) translate(0, 258%)"
+              : "none",
+            "--afterTransform": state.sideBarIsOpen
+              ? "rotate(45deg) translate(9%, -250%)"
+              : "none",
+          }}
           onClick={toggleNavBar}
           aria-label="sidebar_toggle_button"
         ></button>
@@ -54,11 +62,11 @@ const NavLink = (props) => {
         id={`header-navlink-${props.name.toLowerCase()}`}
         style={{
           color: state.currentPage === props.name ? "white" : "gray",
-          //   fontWeight: isSelected ? "bold" : "normal",
+          fontSize: state.currentPage === props.name ? "37pt" : "30pt",
         }}
         onClick={() => {
           dispatch(navigateTo(props.name));
-          dispatch(toggleNavbar(false));
+          dispatch(toggleNavbar());
         }}
         to={props.to}
       >

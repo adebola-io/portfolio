@@ -44,7 +44,7 @@
 html {
   scroll-behavior: smooth;
   &::-webkit-scrollbar {
-    display: none;
+    // display: none;
     background-color: var(--mainTheme);
   }
   &::-webkit-scrollbar-thumb {
