@@ -12,7 +12,7 @@ import "./styles/adebola.css";
 import { useDispatch } from "react-redux";
 
 const Adebola = () => {
-  const delay = useDelay(3400);
+  const delay = useDelay(3600);
   const dispatch = useDispatch();
   React.useEffect(() => {
     let mounted = true;

@@ -29,7 +29,7 @@
       transform: none;
     }
     80% {
-      transform: scaleX(1.5);
+      transform: scaleX(1.25);
     }
     100% {
       transform: none;
@@ -60,6 +60,12 @@
       transform: translateY(-100%);
     }
   }
+  @keyframes show_menu_list {
+    0% {
+      transform: translateX(90%);
+      opacity: 0;
+    }
+  }
   @keyframes heading {
     0% {
       transform: translateY(100%);
@@ -76,31 +82,31 @@
       opacity: 0;
     }
   }
-  @keyframes color_shift {
-    0% {
-      --themeColor: var(--themeColor);
-    }
-    10%,
-    90% {
-      --themeColor: #7c2ab3;
-    }
-    20%,
-    80% {
-      --themeColor: #47bd8c;
-    }
-    30%,
-    70% {
-      --themeColor: #c2ba4c;
-    }
-    40%,
-    60% {
-      --themeColor: #2377f5;
-    }
-    50% {
-      --themeColor: #c9699e;
-    }
-    100% {
-      --themeColor: var(--themeColor);
-    }
-  }
+  // @keyframes color_shift {
+  //   0% {
+  //     --themeColor: var(--themeColor);
+  //   }
+  //   10%,
+  //   90% {
+  //     --themeColor: #7c2ab3;
+  //   }
+  //   20%,
+  //   80% {
+  //     --themeColor: #47bd8c;
+  //   }
+  //   30%,
+  //   70% {
+  //     --themeColor: #c2ba4c;
+  //   }
+  //   40%,
+  //   60% {
+  //     --themeColor: #2377f5;
+  //   }
+  //   50% {
+  //     --themeColor: #c9699e;
+  //   }
+  //   100% {
+  //     --themeColor: var(--themeColor);
+  //   }
+  // }
 }

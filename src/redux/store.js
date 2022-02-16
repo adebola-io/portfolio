@@ -3,8 +3,10 @@ import { element, numerate } from "../utils/func";
 const initialState = {
   currentPage: "Home",
   backdropText: "Adebola",
+  headerColor: "linear-gradient(var(--mainTheme), transparent)",
   sectionHeight:
     window.innerHeight - numerate > 900 ? 900 : window.innerHeight - 65,
+  sideBarIsOpen: false,
   showFeatured: false,
   linesTranslate: "var(--oldTranslateY)",
   stopTogglingLines: false,
@@ -19,10 +21,17 @@ const reducer = function (
   action = { type: "NO_ACTION", payload: "", subload: "" }
 ) {
   switch (action.type) {
-    case "UPDATE_HEADER_COLOR":
+    case "TOGGLE_HEADER_COLOR":
       return {
         ...state,
-        headerColor: action.payload ? "var(--mainTheme)" : "transparent",
+        headerColor: action.payload
+          ? "linear-gradient(var(--mainTheme), var(--mainTheme))"
+          : "linear-gradient(var(--mainTheme), transparent)",
+      };
+    case "TOGGLE_SIDE_BAR":
+      return {
+        ...state,
+        sideBarIsOpen: action.payload,
       };
     case "RESIZE_WINDOW":
       return {

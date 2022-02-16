@@ -37,13 +37,14 @@
   --mainThemeInv: white;
   // --mainTheme: white;
   // --mainThemeInv: #141414;
-  --themeColor: #6108aa;
+  // --themeColor: #6108aa;
+  --themeColor: #0fadf9;
   --color_shift_transition_duration: 1250ms;
 }
 html {
   scroll-behavior: smooth;
   &::-webkit-scrollbar {
-    // display: none;
+    display: none;
     background-color: var(--mainTheme);
   }
   &::-webkit-scrollbar-thumb {

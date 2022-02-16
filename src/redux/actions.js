@@ -4,10 +4,21 @@ export function resizeWindow() {
   };
 }
 
-export function updateHeaderColor(payload) {
+let headerColor = false;
+export function toggleHeaderColor(payload) {
+  headerColor = !headerColor;
   return {
-    type: "UPDATE_HEADER_COLOR",
-    payload,
+    type: "TOGGLE_HEADER_COLOR",
+    payload: payload ? payload : headerColor,
+  };
+}
+
+let sidebarIsOpen = false;
+export function toggleSidebar() {
+  sidebarIsOpen = !sidebarIsOpen;
+  return {
+    type: "TOGGLE_SIDE_BAR",
+    payload: sidebarIsOpen,
   };
 }
 

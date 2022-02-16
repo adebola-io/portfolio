@@ -11,7 +11,7 @@
   --translateY: var(--oldTranslateY);
   background-color: var(--themeColor);
   @media (max-width: 768px) {
-    background-color: #242424;
+    background-color: #333333;
   }
   &.line-1 {
     --oldTranslateY: 31%;
