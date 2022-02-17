@@ -48,22 +48,22 @@
       transform: var(--afterTransform);
     }
   }
-  nav {
-    margin-left: auto;
-    @media (max-width: 475px) {
-      display: none;
-    }
-    ul {
-      display: flex;
-      li {
-        list-style: none;
-        margin: 0 10px;
-        @media (min-width: 2560px) {
-          margin: 0 23px;
-        }
-      }
-    }
-  }
+  // nav {
+  //   margin-left: auto;
+  //   @media (max-width: 475px) {
+  //     display: none;
+  //   }
+  //   ul {
+  //     display: flex;
+  //     li {
+  //       list-style: none;
+  //       margin: 0 10px;
+  //       @media (min-width: 2560px) {
+  //         margin: 0 23px;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .header-navlink {
@@ -73,7 +73,8 @@
 }
 
 .card-under,
-.card-under-2 {
+.card-under-2,
+.card-under-3 {
   position: fixed;
   top: 0;
   z-index: 97;
@@ -86,13 +87,20 @@
   padding: 0;
   overflow: hidden;
   background-color: var(--themeColor);
-  transition-duration: 500ms;
+  transition-duration: 600ms;
   transform: translateY(-100%);
 }
 .card-under-2 {
-  background-color: #034766;
+  background-color: var(--themeColor);
   z-index: 96;
-  transition-duration: 300ms;
+  transition-duration: 500ms;
+  filter: brightness(0.85) hue-rotate(1deg);
+}
+.card-under-3 {
+  background-color: var(--themeColor);
+  z-index: 95;
+  transition-duration: 350ms;
+  filter: brightness(0.65) hue-rotate(1deg);
 }
 menu {
   position: fixed;

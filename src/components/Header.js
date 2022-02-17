@@ -26,8 +26,15 @@ const Header = () => {
         aria-label="card_under_animation"
         className="card-under-2"
       ></div>
+      <div
+        style={{
+          transform: state.sideBarIsOpen ? "none" : "translateY(-100%)",
+        }}
+        aria-label="card_under_animation"
+        className="card-under-3"
+      ></div>
       <Navbar />
-      <header className="header" style={{ backgroundImage: state.headerColor }}>
+      <header className="header">
         {/* <nav>
           <ul>
             <NavLink to="/" name="Home" />
@@ -61,8 +68,9 @@ const NavLink = (props) => {
         className="header-navlink"
         id={`header-navlink-${props.name.toLowerCase()}`}
         style={{
-          color: state.currentPage === props.name ? "white" : "gray",
-          fontSize: state.currentPage === props.name ? "37pt" : "30pt",
+          color:
+            state.currentPage === props.name ? "var(--themeColor)" : "gray",
+          fontSize: state.currentPage === props.name ? "42pt" : "30pt",
         }}
         onClick={() => {
           dispatch(navigateTo(props.name));
@@ -111,7 +119,7 @@ const Navbar = () => {
     >
       <ul>
         {showList && <NavLink name="Home" to="/" anim="400ms" />}
-        {showList && <NavLink name="Works" to="/works" anim="800ms" />}
+        {showList && <NavLink name="Contact" to="/contact-me" anim="800ms" />}
         {showList && <NavLink name="About" to="/about-me" anim="1200ms" />}
       </ul>
       <div className="emp"></div>

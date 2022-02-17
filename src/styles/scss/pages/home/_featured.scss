@@ -39,13 +39,29 @@
   --bgTransform: translateY(100%);
   --tagColor: gray;
   color: white;
-  transition-duration: 750ms;
+  transition-duration: 500ms;
   background-image: linear-gradient(35deg, #292828, #221f1f);
   text-decoration: none;
   overflow: hidden;
+  $transitionDuration: 200;
+  &#fwork-1 {
+    transition-duration: $transitionDuration * 1 + ms;
+  }
+  &#fwork-2 {
+    transition-duration: $transitionDuration * 2 + ms;
+  }
+  &#fwork-3 {
+    transition-duration: $transitionDuration * 3 + ms;
+  }
+  &#fwork-4 {
+    transition-duration: $transitionDuration * 4 + ms;
+  }
+  &#fwork-5 {
+    transition-duration: $transitionDuration * 5 + ms;
+  }
   &.hide-featured-work {
     opacity: 0;
-    transform: translateY(-40%);
+    transform: translate(40%, 40%);
   }
   @media (max-width: 768px) {
     width: 95%;
@@ -68,7 +84,7 @@
     --bgTransform: none;
     --filter: none;
     --tagColor: var(--secColor);
-    // transform: scale(0.95);
+    transform: scale(0.95);
   }
   &::before {
     position: absolute;

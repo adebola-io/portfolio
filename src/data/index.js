@@ -111,3 +111,40 @@ export const contacts = [
     footerImgFilter: "saturate(0) opacity(0.25) invert(1)",
   },
 ];
+
+export const circlesAnimations = [
+  {
+    name: "around_screen",
+    keyframes: [
+      { transform: "translate(-50%, -50%)" },
+      { transform: "translate(50%, 50%)" },
+      { transform: "translate(100%, -50%)" },
+      { transform: "translate(150%, 50%)" },
+      { transform: "translate(200%, -50%)" },
+      { transform: "translate(200%, 50%)" },
+      { transform: "translate(150%, -50%)" },
+      { transform: "translate(100%, 50%)" },
+      { transform: "translate(50%, -50%)" },
+      { transform: "translate(0%, 50%)" },
+      { transform: "translate(-50%, -50%)" },
+    ],
+    duration: 15000,
+    iteration: Infinity,
+  },
+  {
+    name: "around_screen",
+    keyframes: [
+      { transform: "translate(-50%, -50%)" },
+      { transform: "translate(-50%, 50%)" },
+      { transform: "translate(100%, -50%)" },
+      { transform: "translate(200%, 50%)" },
+      { transform: "translate(200%, -50%)" },
+      { transform: "translate(100%, 50%)" },
+      { transform: "translate(100%, -50%)" },
+      { transform: "translate(-50%, 50%)" },
+      { transform: "translate(-50%, -50%)" },
+    ],
+    duration: 15000,
+    iteration: Infinity,
+  },
+];

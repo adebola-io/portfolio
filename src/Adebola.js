@@ -6,8 +6,8 @@ import Start from "./components/Start";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home/index";
-import AllWorks from "./pages/AllWorks/index";
-import AboutMe from "./pages/AboutMe";
+import Contact from "./pages/Contact";
+import AboutMe from "./pages/About";
 import "./styles/adebola.css";
 import { useDispatch } from "react-redux";
 
@@ -33,7 +33,7 @@ const Adebola = () => {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/works" element={<AllWorks />} />
+            <Route path="/contact-me" element={<Contact />} />
             <Route path="/about-me" element={<AboutMe />} />
           </Routes>
           <Footer />

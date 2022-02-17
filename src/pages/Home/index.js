@@ -3,7 +3,7 @@ import FeaturedWorks from "./FeaturedWork";
 import Info from "./Info";
 import ContactMe from "./ContactMe";
 import HomeBanner from "./HomeBanner";
-import BackdropText from "../../components/BackdropText";
+// import BackdropText from "../../components/BackdropText";
 import Lines from "./Lines";
 import { useSelector } from "react-redux";
 import { element, elementAll, whenInView } from "../../utils/func";
@@ -39,6 +39,9 @@ const Home = () => {
               setTimeout(() => {
                 elementAll(".featured-work").forEach((elem) => {
                   elem.classList.remove("hide-featured-work");
+                  setTimeout(() => {
+                    elem.style.transitionDuration = "500ms";
+                  }, 3000);
                 });
               }, 200);
               featured = true;
@@ -182,7 +185,7 @@ const Home = () => {
   }, []);
   return (
     <main id="home" className="page">
-      <BackdropText text="Adebola" />
+      {/* <BackdropText text="Adebola" /> */}
       <HomeBanner />
       <Info />
       <FeaturedWorks />

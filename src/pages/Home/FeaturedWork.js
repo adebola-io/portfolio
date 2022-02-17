@@ -20,6 +20,7 @@ const FeaturedWorks = () => {
             return (
               <FeaturedWork
                 key={index}
+                id={index}
                 logo={featuredWork.logo}
                 link={featuredWork.link}
                 code={featuredWork.code}
@@ -61,6 +62,7 @@ const FeaturedWork = (props) => {
       to={`/works/${props.name.toLowerCase()}`}
       style={FeaturedWorkStyle}
       className="featured-work hide-featured-work"
+      id={`fwork-${props.id + 1}`}
     >
       <h1>{props.name}</h1>
       <p>{props.info}</p>
@@ -78,6 +80,7 @@ const FeaturedWork = (props) => {
   );
 };
 FeaturedWork.propTypes = {
+  id: PropTypes.number,
   thColor: PropTypes.string,
   thColor2: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -86,6 +89,7 @@ FeaturedWork.propTypes = {
   scColor: PropTypes.string,
 };
 FeaturedWork.defaultProps = {
+  id: 0,
   thColor: "var(--themeColor)",
   name: "Featured Work",
   info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ad, maxime voluptates ut dolor volu.",

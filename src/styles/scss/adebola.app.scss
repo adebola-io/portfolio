@@ -5,6 +5,7 @@
 @use "components/header";
 @use "components/footer";
 @use "pages/home/home";
+@use "pages/contact/contact";
 @use "config/variables";
 @use "config/animations";
 
@@ -38,7 +39,8 @@
   // --mainTheme: white;
   // --mainThemeInv: #141414;
   // --themeColor: #6108aa;
-  --themeColor: #0fadf9;
+  // --themeColor: #0993d3;
+  --themeColor: #9e2bd3;
   --color_shift_transition_duration: 1250ms;
 }
 html {
