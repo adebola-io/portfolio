@@ -5,7 +5,6 @@
 @use "components/header";
 @use "components/footer";
 @use "pages/home/home";
-@use "pages/contact/contact";
 @use "config/variables";
 @use "config/animations";
 
@@ -40,8 +39,8 @@
   // --mainThemeInv: #141414;
   // --themeColor: #6108aa;
   // --themeColor: #0993d3;
-  // --themeColor: #4801cc;
-  --themeColor: #b6b5b5;
+  --themeColor: #fca14d;
+  // --themeColor: #b6b5b5;
   --color_shift_transition_duration: 1250ms;
 }
 html {
@@ -85,6 +84,9 @@ main {
   font-size: 40vw;
   font-family: sans-serif;
   overflow: hidden;
+  p {
+    animation: backdroptxt 7000ms infinite linear;
+  }
   @media (max-width: 425px) {
     color: #1c1c1c;
   }

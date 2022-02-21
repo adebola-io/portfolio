@@ -102,21 +102,21 @@
   padding: 0;
   overflow: hidden;
   background-color: var(--themeColor);
-  transition-duration: 600ms;
+  transition-duration: 800ms;
   transform: translateY(-100%);
 }
 
 .card-under-2 {
   background-color: var(--themeColor);
   z-index: 96;
-  transition-duration: 500ms;
+  transition-duration: 600ms;
   filter: brightness(0.65) hue-rotate(1deg);
 }
 
 .card-under-3 {
   background-color: var(--themeColor);
   z-index: 95;
-  transition-duration: 350ms;
+  transition-duration: 400ms;
   filter: brightness(0.45) hue-rotate(1deg);
 }
 
@@ -135,7 +135,7 @@ menu {
   padding: 0;
   overflow: hidden;
   background-color: var(--mainTheme);
-  transition-duration: 750ms;
+  transition-duration: 1000ms;
   transform: translateY(-160px);
 }
 menu ul {
@@ -494,7 +494,7 @@ footer .footer-links li img {
 #info div {
   overflow: hidden;
   height: fit-content;
-  width: 45%;
+  width: 47%;
 }
 @media (max-width: 768px) {
   #info div {
@@ -821,40 +821,6 @@ section > .content {
   }
 }
 
-#contacts {
-  width: 90%;
-  padding: 0 5%;
-}
-#contacts h1 {
-  width: 100%;
-  text-align: center;
-  font-size: 45pt;
-  transition-duration: 500ms;
-  cursor: pointer;
-}
-#contacts h1:hover {
-  transform: scale(1.05);
-}
-#contacts .other-contacts {
-  height: fit-content;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  column-gap: 5%;
-  overflow: hidden;
-}
-#contacts .other-contacts a {
-  height: 190px;
-  margin: 20px 0;
-  color: inherit;
-  border: 2px solid;
-  text-decoration: none;
-  transition-duration: 500ms;
-}
-#contacts .other-contacts a:hover {
-  transform: scale(0.92);
-}
-
 @keyframes start_message_p {
   0% {
     transform: translateX(150%);
@@ -900,8 +866,13 @@ section > .content {
 }
 @keyframes backdroptxt {
   0% {
-    transform: translate(-50%);
-    opacity: 0;
+    transform: translate(0%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(34%);
   }
 }
 @keyframes header {
@@ -968,7 +939,7 @@ section > .content {
 :root {
   --mainTheme: #141414;
   --mainThemeInv: white;
-  --themeColor: #b6b5b5;
+  --themeColor: #fca14d;
   --color_shift_transition_duration: 1250ms;
 }
 
@@ -1015,6 +986,9 @@ main {
   font-size: 40vw;
   font-family: sans-serif;
   overflow: hidden;
+}
+.backdrop p {
+  animation: backdroptxt 7000ms infinite linear;
 }
 @media (max-width: 425px) {
   .backdrop {

@@ -4,7 +4,9 @@ const BackdropText = (props) => {
   return (
     <div className="backdrop">
       <span className="text">
-        <p>{props.text}</p>
+        <p>
+          {props.text} {props.text} {props.text}
+        </p>
       </span>
     </div>
   );

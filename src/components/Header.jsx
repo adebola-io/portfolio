@@ -119,8 +119,7 @@ const Navbar = () => {
     >
       <ul>
         {showList && <NavLink name="Home" to="/" anim="400ms" />}
-        {showList && <NavLink name="Contact" to="/contact-me" anim="800ms" />}
-        {showList && <NavLink name="About" to="/about-me" anim="1200ms" />}
+        {showList && <NavLink name="About" to="/about-me" anim="800ms" />}
       </ul>
       <div className="emp"></div>
     </menu>

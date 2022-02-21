@@ -3,7 +3,7 @@ import FeaturedWorks from "./FeaturedWork";
 import Info from "./Info";
 import ContactMe from "./ContactMe";
 import HomeBanner from "./HomeBanner";
-import BackdropText from "../../components/BackdropText";
+import BackdropText from "../../components/BackdropText.jsx";
 import Lines from "./Lines";
 import { useSelector } from "react-redux";
 import { element, elementAll, whenInView } from "../../utils/func";
