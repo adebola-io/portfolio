@@ -91,16 +91,18 @@ export const works = [
 export const contacts = [
   {
     name: "Twitter",
-    link: "http://",
+    link: "https://twitter.com/adebola_xyz",
     logo: require("../assets/images/logos/twitter.png"),
     imgFilter: "saturate(0) brightness(2)",
+    hoverFilter: "sepia(1) saturate(5) hue-rotate(6deg)",
     footerImgFilter: "saturate(0) brightness(0.5)",
   },
   {
     name: "Github",
-    link: "http://",
+    link: "https://github.com/adebola-xyz",
     logo: require("../assets/images/logos/github.png"),
     imgFilter: "saturate(0) brightness(2)",
+    hoverFilter: "sepia(1) saturate(5) hue-rotate(-3deg)",
     footerImgFilter: "saturate(0) brightness(0.5)",
   },
   {
@@ -108,6 +110,7 @@ export const contacts = [
     link: "http://",
     logo: require("../assets/images/logos/linkedin.png"),
     imgFilter: "saturate(0) invert(1) brightness(2)",
+    hoverFilter: "invert(1) sepia(1) saturate(53) hue-rotate(-27deg)",
     footerImgFilter: "saturate(0) opacity(0.25) invert(1)",
   },
 ];

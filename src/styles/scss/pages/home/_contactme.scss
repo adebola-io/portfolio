@@ -32,6 +32,10 @@
     font-family: Lato;
     cursor: pointer;
     transition-duration: 500ms;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
     @media (min-width: 2560px) {
       font-size: 87pt;
       transition-duration: 750ms;
@@ -95,7 +99,7 @@
         transition-duration: 200ms;
         &:hover {
           transform: scale(1.05);
-          --imgFilter: none;
+          --imgFilter: var(--hoverImgFilter);
         }
         img {
           height: 55px;

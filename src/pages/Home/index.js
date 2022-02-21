@@ -185,7 +185,7 @@ const Home = () => {
   }, []);
   return (
     <main id="home" className="page">
-      <BackdropText text="Adebola" />
+      {/* <BackdropText text="Adebola" /> */}
       <HomeBanner />
       <Info />
       <FeaturedWorks />

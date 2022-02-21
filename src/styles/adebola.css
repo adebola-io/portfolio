@@ -191,6 +191,23 @@ footer .footer-links li img {
   }
 }
 
+#cursor-container {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  height: fit-content;
+  width: fit-content;
+}
+
+figure#cursor {
+  margin: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--themeColor);
+  transition-duration: 300ms;
+}
+
 .lines {
   position: fixed;
   right: 0;
@@ -565,6 +582,10 @@ footer .footer-links li img {
   cursor: pointer;
   transition-duration: 500ms;
 }
+#contactme h1 a {
+  color: inherit;
+  text-decoration: none;
+}
 @media (min-width: 2560px) {
   #contactme h1 {
     font-size: 87pt;
@@ -644,7 +665,7 @@ footer .footer-links li img {
 }
 #contactme ul li a:hover {
   transform: scale(1.05);
-  --imgFilter: none;
+  --imgFilter: var(--hoverImgFilter);
 }
 #contactme ul li a img {
   height: 55px;
@@ -787,10 +808,12 @@ section > .content {
   width: 130px;
   height: 55px;
   border: 2px solid var(--themeColor);
+  background-color: transparent;
   color: var(--themeColor);
   text-decoration: none;
   font-size: 15pt;
   overflow: hidden;
+  cursor: pointer;
   transition-duration: var(--color_shift_transition_duration);
   animation: heading_button 600ms;
 }
@@ -937,9 +960,9 @@ section > .content {
   src: url("../assets/fonts/Zen_Kaku_Gothic_Antique/ZenKakuGothicAntique-Regular.ttf");
 }
 :root {
-  --mainTheme: #141414;
+  --mainTheme: #020202;
   --mainThemeInv: white;
-  --themeColor: #fca14d;
+  --themeColor: #ffb900;
   --color_shift_transition_duration: 1250ms;
 }
 

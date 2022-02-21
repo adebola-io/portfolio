@@ -98,10 +98,12 @@ section > .content {
   width: 130px;
   height: 55px;
   border: 2px solid var(--themeColor);
+  background-color: transparent;
   color: var(--themeColor);
   text-decoration: none;
   font-size: 15pt;
   overflow: hidden;
+  cursor: pointer;
   transition-duration: var(--color_shift_transition_duration);
   animation: heading_button $home_page_animation_speed + ms;
   span {

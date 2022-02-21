@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link as a } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { navigateTo } from "../../redux/actions";
@@ -32,15 +32,17 @@ const FeaturedWorks = () => {
               />
             );
           })}
-          <Link
+          <a
             onClick={() => {
               dispatch(navigateTo("Works"));
             }}
             className="see-all"
-            to="/works"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/adebola-xyz?tab=repositories"
           >
             SEE ALL WORKS -{">"}
-          </Link>
+          </a>
         </div>
       </div>
     </section>
@@ -56,8 +58,10 @@ const FeaturedWork = (props) => {
     height: window.innerHeight / 2,
   };
   return (
-    <Link
-      to={`/works/${props.name.toLowerCase()}`}
+    <a
+      href={`http://github.com/adebola-xyz/${props.name.toLowerCase()}`}
+      target="_blank"
+      rel="noreferrer"
       style={FeaturedWorkStyle}
       className="featured-work"
       id={`fwork-${props.id + 1}`}
@@ -74,7 +78,7 @@ const FeaturedWork = (props) => {
           return <li key={index}>{technology}</li>;
         })}
       </ul>
-    </Link>
+    </a>
   );
 };
 FeaturedWork.propTypes = {

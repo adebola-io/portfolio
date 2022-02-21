@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const HomeBanner = () => {
   const state = useSelector((state) => state);
+  function goToContacts() {
+    document.querySelector("html").scrollTop = state.sectionHeight * 3.5;
+  }
   return (
     <section id="home-banner" style={{ height: `${state.sectionHeight}px` }}>
       <div className="overlay"></div>
@@ -17,13 +19,14 @@ const HomeBanner = () => {
           Welcome! You've reached the page of Adebola Akomolafe, a front-end web
           developer from Lagos, Nigeria.
         </p>
-        <Link
+        <button
+          onClick={goToContacts}
           aria-label="contact_me"
           className="heading-button contact-me"
           to="/contact-me"
         >
           <span>Contact Me</span>
-        </Link>
+        </button>
       </div>
     </section>
   );
