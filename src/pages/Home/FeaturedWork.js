@@ -12,9 +12,7 @@ const FeaturedWorks = () => {
   return (
     <section id="featured-works">
       <div className="content">
-        <h1 className="featured-works-heading hide-featured-works-heading">
-          Featured Works
-        </h1>
+        <h1 className="featured-works-heading">Featured Works</h1>
         <div ref={reference} className="featured-works-container">
           {featuredWorks.map((featuredWork, index) => {
             return (
@@ -61,7 +59,7 @@ const FeaturedWork = (props) => {
     <Link
       to={`/works/${props.name.toLowerCase()}`}
       style={FeaturedWorkStyle}
-      className="featured-work hide-featured-work"
+      className="featured-work"
       id={`fwork-${props.id + 1}`}
     >
       <h1>{props.name}</h1>

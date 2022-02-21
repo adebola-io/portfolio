@@ -13,7 +13,7 @@ const Info = () => {
         }}
       >
         <div>
-          <p className="hidden">
+          <p>
             I, Adebola, am a self-motivated developer skilled in a number of web
             technologies. I consider myself a goal-oriented, focus-driven and
             all around fun individual, and I can bring your wildest ideas to

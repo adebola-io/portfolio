@@ -3,7 +3,7 @@ import FeaturedWorks from "./FeaturedWork";
 import Info from "./Info";
 import ContactMe from "./ContactMe";
 import HomeBanner from "./HomeBanner";
-// import BackdropText from "../../components/BackdropText";
+import BackdropText from "../../components/BackdropText";
 import Lines from "./Lines";
 import { useSelector } from "react-redux";
 import { element, elementAll, whenInView } from "../../utils/func";
@@ -13,81 +13,81 @@ const Home = () => {
   React.useEffect(() => {
     let bannerisHidden = false,
       lineState = 1,
-      featured = false,
-      contactIsViewed = false,
+      // featured = false,
+      // contactIsViewed = false,
       mounted = true;
-    function checkViewforInfo() {
-      if (element("#info div p")) {
-        whenInView(
-          element("#info div p"),
-          () => {
-            element("#info div p").classList.remove("hidden");
-          },
-          state.sectionHeight / 3
-        );
-      }
-    }
-    function checkViewforFeatured() {
-      if (element(".featured-work")) {
-        whenInView(
-          element(".featured-work"),
-          () => {
-            if (!featured) {
-              element(".featured-works-heading").classList.remove(
-                "hide-featured-works-heading"
-              );
-              setTimeout(() => {
-                elementAll(".featured-work").forEach((elem) => {
-                  elem.classList.remove("hide-featured-work");
-                  setTimeout(() => {
-                    elem.style.transitionDuration = "500ms";
-                  }, 3000);
-                });
-              }, 200);
-              featured = true;
-            }
-          },
-          state.sectionHeight / 3
-        );
-      }
-    }
-    function checkViewforContact() {
-      if (element("#contactme h1")) {
-        whenInView(
-          element("#contactme h1"),
-          () => {
-            if (!contactIsViewed) {
-              element("#contactme h1").classList.remove(
-                "hide-contact-heading1"
-              );
-              element("#contactme p").classList.remove("hide-contact-p");
-              element("#contactme h2").classList.remove(
-                "hide-contact-heading2"
-              );
-              elementAll("#contactme ul li").forEach((elem, index) => {
-                elem.animate(
-                  [
-                    { transform: "translateX(100%)", opacity: "0" },
-                    { opacity: "1" },
-                  ],
-                  {
-                    duration: (index + 1) * 500,
-                    fill: "forwards",
-                  }
-                );
-              });
-              contactIsViewed = true;
-            }
-          },
-          state.sectionHeight / 6
-        );
-      }
-    }
-    checkViewforInfo();
-    checkViewforFeatured();
-    checkViewforContact();
+    // function checkViewforInfo() {
+    //   if (element("#info div p")) {
+    //     whenInView(
+    //       element("#info div p"),
+    //       () => {
+    //         element("#info div p").classList.remove("hidden");
+    //       },
+    //       state.sectionHeight / 3
+    //     );
+    //   }
+    // }
+    // function checkViewforFeatured() {
+    //   if (element(".featured-work")) {
+    //     whenInView(
+    //       element(".featured-work"),
+    //       () => {
+    //         if (!featured) {
+    //           element(".featured-works-heading").classList.remove(
+    //             "hide-featured-works-heading"
+    //           );
+    //           setTimeout(() => {
+    //             elementAll(".featured-work").forEach((elem) => {
+    //               elem.classList.remove("hide-featured-work");
+    //               setTimeout(() => {
+    //                 elem.style.transitionDuration = "500ms";
+    //               }, 3000);
+    //             });
+    //           }, 200);
+    //           featured = true;
+    //         }
+    //       },
+    //       state.sectionHeight / 3
+    //     );
+    //   }
+    // }
+    // function checkViewforContact() {
+    //   if (element("#contactme h1")) {
+    //     whenInView(
+    //       element("#contactme h1"),
+    //       () => {
+    //         if (!contactIsViewed) {
+    //           element("#contactme h1").classList.remove(
+    //             "hide-contact-heading1"
+    //           );
+    //           element("#contactme p").classList.remove("hide-contact-p");
+    //           element("#contactme h2").classList.remove(
+    //             "hide-contact-heading2"
+    //           );
+    //           elementAll("#contactme ul li").forEach((elem, index) => {
+    //             elem.animate(
+    //               [
+    //                 { transform: "translateX(100%)", opacity: "0" },
+    //                 { opacity: "1" },
+    //               ],
+    //               {
+    //                 duration: (index + 1) * 500,
+    //                 fill: "forwards",
+    //               }
+    //             );
+    //           });
+    //           contactIsViewed = true;
+    //         }
+    //       },
+    //       state.sectionHeight / 6
+    //     );
+    //   }
+    // }
+    // checkViewforInfo();
+    // checkViewforFeatured();
+    // checkViewforContact();
     function scrollListener() {
-      checkViewforInfo();
+      // checkViewforInfo();
 
       // HOME BANNER SCROLL ANIMATION
       if (element("#home-banner")) {
@@ -173,10 +173,10 @@ const Home = () => {
       }
 
       // FEATURED WORKS ANIMATION
-      checkViewforFeatured();
+      // checkViewforFeatured();
 
       // CONTACT ANIMATION
-      checkViewforContact();
+      // checkViewforContact();
     }
     window.addEventListener("scroll", scrollListener);
     return () => {
@@ -185,7 +185,7 @@ const Home = () => {
   }, []);
   return (
     <main id="home" className="page">
-      {/* <BackdropText text="Adebola" /> */}
+      <BackdropText text="Adebola" />
       <HomeBanner />
       <Info />
       <FeaturedWorks />

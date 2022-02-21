@@ -82,7 +82,6 @@
     }
     li {
       list-style: none;
-      opacity: 0;
       a {
         --imgFilterContainer: saturate(0) brightness(2);
         --imgFilter: var(--imgFilterContainer);

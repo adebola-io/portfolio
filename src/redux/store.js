@@ -6,6 +6,7 @@ const initialState = {
   headerColor: "linear-gradient(var(--mainTheme), transparent)",
   sectionHeight:
     window.innerHeight - numerate > 900 ? 900 : window.innerHeight - 65,
+  windowHeight: window.innerHeight,
   sideBarIsOpen: false,
   showFeatured: false,
   linesTranslate: "var(--oldTranslateY)",
@@ -46,6 +47,7 @@ const reducer = function (
               ? numerate(element("section"), "max-height")
               : 900
             : window.innerHeight - numerate(element("header"), "height"),
+        windowHeight: window.innerHeight,
       };
     case "NAVIGATE_TO":
       return {
