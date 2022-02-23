@@ -14,7 +14,7 @@
   font-weight: bold;
   font-size: 30pt;
   font-family: Quicksand, Lato, "Segoe UI", sans-serif;
-  color: white;
+  color: black;
   animation: start_message_p 3000ms;
 }
 .start .start-message .start-secondary-bg {
@@ -208,6 +208,8 @@ figure#cursor {
   mix-blend-mode: difference;
   border: 4px solid var(--themeColor);
   animation: cursor-present 600ms;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
 }
 figure#cursor::before {
   position: absolute;
@@ -321,20 +323,24 @@ figure#cursor::after {
 }
 @media (max-width: 768px) {
   #featured-works {
+    max-height: -moz-fit-content;
+    max-height: -ms-fit-content;
     max-height: fit-content;
   }
 }
 
 .featured-works-container {
+  display: -ms-grid;
+  display: -moz-grid;
   display: grid;
-  grid-template-columns: 31.3% 33.3% 31.3%;
+  grid: auto/31.3% 33.3% 31.3%;
   column-gap: 2%;
   row-gap: 4%;
   width: 100%;
 }
 @media (max-width: 768px) {
   .featured-works-container {
-    grid-template-columns: 100%;
+    grid: auto/100%;
     place-items: center;
     row-gap: 2%;
   }
@@ -355,6 +361,7 @@ figure#cursor::after {
 
 .featured-work {
   position: relative;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   min-height: 200px;
@@ -886,8 +893,10 @@ section > .content {
 }
 
 #stack-list {
+  display: -ms-grid;
+  display: -moz-grid;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid: auto/auto auto auto;
   width: 94%;
   margin: 0;
   padding: 0 3%;
@@ -897,13 +906,14 @@ section > .content {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 220px;
-  list-style: none;
+  height: 30px;
+  list-style-type: disc;
   color: white;
 }
 #stack-list li .stack-t-logo {
   height: 50%;
-  opacity: 0.95;
+  opacity: 0;
+  transition-duration: 300ms;
   filter: saturate(0);
 }
 #stack-list li #nextjs-logo {
@@ -915,7 +925,7 @@ section > .content {
 
 @keyframes start_message_p {
   0% {
-    transform: translateX(150%);
+    transform: translateX(100%);
     opacity: 0;
   }
   70% {
@@ -1000,6 +1010,29 @@ section > .content {
     transform: translateX(50%);
   }
 }
+@keyframes color_shift {
+  0% {
+    --themeColor: var(--themeColor);
+  }
+  10%, 90% {
+    --themeColor: #7c2ab3;
+  }
+  20%, 80% {
+    --themeColor: #47bd8c;
+  }
+  30%, 70% {
+    --themeColor: #c2ba4c;
+  }
+  40%, 60% {
+    --themeColor: #2377f5;
+  }
+  50% {
+    --themeColor: #c9699e;
+  }
+  100% {
+    --themeColor: var(--themeColor);
+  }
+}
 
 /*
 * This is the base SCSS file for your app.
@@ -1033,7 +1066,6 @@ section > .content {
 
 html {
   scroll-behavior: smooth;
-  cursor: none;
 }
 html::-webkit-scrollbar {
   background-color: var(--mainTheme);

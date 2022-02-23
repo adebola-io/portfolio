@@ -1,17 +1,21 @@
 #featured-works {
   position: relative;
   @media (max-width: 768px) {
+    max-height: -moz-fit-content;
+    max-height: -ms-fit-content;
     max-height: fit-content;
   }
 }
 .featured-works-container {
+  display: -ms-grid;
+  display: -moz-grid;
   display: grid;
-  grid-template-columns: 31.3% 33.3% 31.3%;
+  grid: auto/ 31.3% 33.3% 31.3%;
   column-gap: 2%;
   row-gap: 4%;
   width: 100%;
   @media (max-width: 768px) {
-    grid-template-columns: 100%;
+    grid: auto/ 100%;
     place-items: center;
     row-gap: 2%;
   }
@@ -31,6 +35,7 @@
 }
 .featured-work {
   position: relative;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   min-height: 200px;

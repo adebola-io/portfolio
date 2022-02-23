@@ -6,8 +6,6 @@
     font-size: 35pt;
   }
 }
-#about-section-1 {
-}
 #my-stack {
   h1 {
     width: 100%;
@@ -15,8 +13,10 @@
   }
 }
 #stack-list {
+  display: -ms-grid;
+  display: -moz-grid;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid: auto/ auto auto auto;
   width: 94%;
   margin: 0;
   padding: 0 3%;
@@ -25,12 +25,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 220px;
-    list-style: none;
+    height: 30px;
+    // list-style: none;
+    list-style-type: disc;
     color: white;
     .stack-t-logo {
       height: 50%;
-      opacity: 0.95;
+      opacity: 0;
+      transition-duration: 300ms;
       filter: saturate(0);
     }
     #nextjs-logo {

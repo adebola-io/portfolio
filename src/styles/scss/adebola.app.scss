@@ -42,7 +42,7 @@
 }
 html {
   scroll-behavior: smooth;
-  cursor: none;
+  // cursor: none;
   &::-webkit-scrollbar {
     // display: none;
     background-color: var(--mainTheme);
@@ -71,7 +71,6 @@ body {
   font-family: Quicksand, Lato, Candara, sans-serif;
   animation: color_shift 40000ms infinite;
   overflow-x: hidden;
-  // --themeColor: #16a5d4;
 }
 .page {
   animation: page 800ms;

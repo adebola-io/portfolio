@@ -1,10 +1,10 @@
 import React from "react";
-// import BackdropText from "../../components/BackdropText.jsx";
+import BackdropText from "../../components/BackdropText.jsx";
 import { stack } from "../../data/index.js";
 const AboutMe = () => {
   return (
     <main>
-      {/* <BackdropText text="About" /> */}
+      <BackdropText text="About" />
       <section className="about-me-section" id="about-section-1">
         <h1>Who am I? </h1>
         <p>
@@ -49,14 +49,20 @@ const AboutMe = () => {
 };
 
 const Tech = (props) => {
+  const image = React.useRef(null);
+  function show() {
+    image.current.style.opacity = "0.95";
+  }
   return (
     <li key={props.key}>
-      <img
+      {/* <img
+        ref={image}
+        onLoad={show}
         src={props.logo}
         alt={props.name}
         className="stack-t-logo"
         id={`${props.name.toLowerCase()}-logo`}
-      />
+      /> */}
       <label htmlFor="stack-t-logo">{props.name}</label>
     </li>
   );

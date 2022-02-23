@@ -1,7 +1,7 @@
 :root {
   @keyframes start_message_p {
     0% {
-      transform: translateX(150%);
+      transform: translateX(100%);
       opacity: 0;
     }
     70% {
@@ -94,31 +94,31 @@
       transform: translateX(50%);
     }
   }
-  // @keyframes color_shift {
-  //   0% {
-  //     --themeColor: var(--themeColor);
-  //   }
-  //   10%,
-  //   90% {
-  //     --themeColor: #7c2ab3;
-  //   }
-  //   20%,
-  //   80% {
-  //     --themeColor: #47bd8c;
-  //   }
-  //   30%,
-  //   70% {
-  //     --themeColor: #c2ba4c;
-  //   }
-  //   40%,
-  //   60% {
-  //     --themeColor: #2377f5;
-  //   }
-  //   50% {
-  //     --themeColor: #c9699e;
-  //   }
-  //   100% {
-  //     --themeColor: var(--themeColor);
-  //   }
-  // }
+  @keyframes color_shift {
+    0% {
+      --themeColor: var(--themeColor);
+    }
+    10%,
+    90% {
+      --themeColor: #7c2ab3;
+    }
+    20%,
+    80% {
+      --themeColor: #47bd8c;
+    }
+    30%,
+    70% {
+      --themeColor: #c2ba4c;
+    }
+    40%,
+    60% {
+      --themeColor: #2377f5;
+    }
+    50% {
+      --themeColor: #c9699e;
+    }
+    100% {
+      --themeColor: var(--themeColor);
+    }
+  }
 }

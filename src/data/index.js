@@ -131,11 +131,11 @@ export const stack = [
     logo: require("../assets/images/logos/mysql.png"),
     filter: "invert(1) sepia(1) saturate(5.5)",
   },
-  {
-    name: "Redux",
-    logo: require("../assets/images/logos/redux.png"),
-    filter: "invert(1) sepia(1) saturate(6) hue-rotate(7deg)",
-  },
+  // {
+  //   name: "Redux",
+  //   logo: require("../assets/images/logos/redux.png"),
+  //   filter: "invert(1) sepia(1) saturate(6) hue-rotate(7deg)",
+  // },
   {
     name: "MongoDB",
     logo: require("../assets/images/logos/mongo.png"),
