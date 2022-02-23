@@ -1,0 +1,43 @@
+.about-me-section {
+  width: 90%;
+  padding: 0 5%;
+  h1 {
+    color: var(--themeColor);
+    font-size: 35pt;
+  }
+}
+#about-section-1 {
+}
+#my-stack {
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+#stack-list {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  width: 94%;
+  margin: 0;
+  padding: 0 3%;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 220px;
+    list-style: none;
+    color: white;
+    .stack-t-logo {
+      height: 50%;
+      opacity: 0.95;
+      filter: saturate(0);
+    }
+    #nextjs-logo {
+      filter: saturate(0) invert(1);
+    }
+    #tailwind-logo {
+      height: 40%;
+    }
+  }
+}

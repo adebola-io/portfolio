@@ -32,7 +32,9 @@ section > .content {
   transform: scale(0.5) translateY(-10%);
 }
 .home-heading-container {
+  height: -moz-fit-content;
   height: fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   overflow: hidden;
 }

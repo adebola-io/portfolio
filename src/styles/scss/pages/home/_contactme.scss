@@ -105,6 +105,8 @@
           height: 55px;
           margin-bottom: 10px;
           transition-duration: 500ms;
+          -ms-filter: var(--imgFilter);
+          -webkit-filter: var(--imgFilter);
           filter: var(--imgFilter);
           @media (min-width: 2560px) {
             height: 120px;

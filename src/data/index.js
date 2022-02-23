@@ -74,19 +74,79 @@ export const works = [
   },
 ];
 
-// export const stack = [
-//   {
-//     name: "React",
-//     logo: require("../assets/images/logos/react.png"),
-//   },
-//   {
-//     name: "Vue",
-//     logo: require("../assets/images/logos/vue.png"),
-//   },
-//   {
-//     name: "",
-//   },
-// ];
+export const stack = [
+  {
+    name: "React",
+    logo: require("../assets/images/logos/react.png"),
+    filter: "sepia(1) saturate(4.5)",
+  },
+  {
+    name: "Javascript",
+    logo: require("../assets/images/logos/js.png"),
+    filter: "none",
+  },
+  {
+    name: "Vue",
+    logo: require("../assets/images/logos/vue.png"),
+    filter: "invert(1) saturate(0) sepia(1) saturate(5.5)",
+  },
+  {
+    name: "Typescript",
+    logo: require("../assets/images/logos/ts.png"),
+    filter: "invert(1) sepia(1) saturate(6) hue-rotate(7deg)",
+  },
+  {
+    name: "Tailwind",
+    logo: require("../assets/images/logos/tailwind.png"),
+    filter: "invert(1) sepia(1) saturate(6) hue-rotate(7deg)",
+  },
+  {
+    name: "CSS-in-JS",
+    logo: require("../assets/images/logos/css.png"),
+    filter: "invert() sepia(1) saturate(4.5) hue-rotate(8deg)",
+  },
+  {
+    name: "SCSS",
+    logo: require("../assets/images/logos/sass.png"),
+    filter:
+      "invert() sepia(1) saturate(8.5) hue-rotate(26deg) brightness(1.25)",
+  },
+  {
+    name: "NextJS",
+    logo: require("../assets/images/logos/next-js.png"),
+    filter: "invert(1) sepia(1) saturate(6) hue-rotate(7deg)",
+  },
+  {
+    name: "Node JS",
+    logo: require("../assets/images/logos/node.png"),
+    filter: "invert(1) sepia(1) contrast(1.5) saturate(5.5) hue-rotate(-6deg)",
+  },
+  {
+    name: "Wordpress",
+    logo: require("../assets/images/logos/wordpress.png"),
+    filter: "invert(1) sepia(1) saturate(6) hue-rotate(7deg)",
+  },
+  {
+    name: "MySQL",
+    logo: require("../assets/images/logos/mysql.png"),
+    filter: "invert(1) sepia(1) saturate(5.5)",
+  },
+  {
+    name: "Redux",
+    logo: require("../assets/images/logos/redux.png"),
+    filter: "invert(1) sepia(1) saturate(6) hue-rotate(7deg)",
+  },
+  {
+    name: "MongoDB",
+    logo: require("../assets/images/logos/mongo.png"),
+    filter: "invert(1) sepia(1) saturate(6) hue-rotate(7deg)",
+  },
+  {
+    name: "Angular",
+    logo: require("../assets/images/logos/angular.png"),
+    filter: "invert(1) sepia(1) saturate(6) hue-rotate(7deg)",
+  },
+];
 
 export const contacts = [
   {

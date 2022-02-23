@@ -1,7 +1,12 @@
 import { element, numerate } from "../utils/func";
 
 const initialState = {
-  currentPage: "Home",
+  currentPage:
+    window.location.pathname === "/"
+      ? "Home"
+      : window.location.pathname === "/about-me"
+      ? "About"
+      : "",
   backdropText: "Adebola",
   headerColor: "linear-gradient(var(--mainTheme), transparent)",
   sectionHeight:

@@ -6,13 +6,13 @@
     .start-main-bg {
       height: 100%;
       width: 33.3333%;
-      background-color: var(--mainThemeInv);
+      background-color: var(--themeColor);
       p {
         margin: 0;
         font-weight: bold;
         font-size: 30pt;
         font-family: Lato, "Segoe UI", sans-serif;
-        color: var(--themeColor);
+        color: black;
         animation: start_message_p $start_message + ms;
       }
     }
@@ -27,7 +27,6 @@
         width: 50%;
         // background-color: rgb(34, 3, 75);
         background-color: var(--themeColor);
-        filter: brightness(0.5);
         animation: start_secondary_inner $start_message + 800 + ms;
       }
     }

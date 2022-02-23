@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Start from "./components/Start";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
+import Cursor from "./components/Cursor.jsx";
 import Home from "./pages/Home/index";
 import AboutMe from "./pages/About";
 import "./styles/adebola.css";
@@ -29,6 +30,7 @@ const Adebola = () => {
     return (
       <div className="app">
         <Router>
+          <Cursor />
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />

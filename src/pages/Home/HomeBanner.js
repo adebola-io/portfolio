@@ -4,7 +4,10 @@ import { useSelector } from "react-redux";
 const HomeBanner = () => {
   const state = useSelector((state) => state);
   function goToContacts() {
-    document.querySelector("html").scrollTop = state.sectionHeight * 3.5;
+    document.querySelector("html").scrollTop =
+      window.innerWidth > 769
+        ? state.sectionHeight * 3.5
+        : state.sectionHeight * 5;
   }
   return (
     <section id="home-banner" style={{ height: `${state.sectionHeight}px` }}>
