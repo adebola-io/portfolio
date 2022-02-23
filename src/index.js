@@ -3,16 +3,17 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducer from "./redux/store";
-import Adebola from "./Adebola";
 import reportWebVitals from "./reportWebVitals";
+import Start from "./Start";
+import "./styles/adebola.css";
 
 const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Adebola />
+    <Start />
   </Provider>,
-  document.getElementById("root")
+  document.getElementById("adebola-root")
 );
 
 // If you want to start measuring performance in your app, pass a function

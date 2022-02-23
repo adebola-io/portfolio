@@ -2,33 +2,27 @@
   overflow: hidden;
 }
 .start .start-message {
-  width: 300%;
+  width: 200%;
 }
 .start .start-message .start-main-bg {
   height: 100%;
-  width: 33.3333%;
+  width: 50%;
   background-color: var(--themeColor);
 }
 .start .start-message .start-main-bg p {
   margin: 0;
   font-weight: bold;
   font-size: 30pt;
-  font-family: Lato, "Segoe UI", sans-serif;
-  color: black;
+  font-family: Quicksand, Lato, "Segoe UI", sans-serif;
+  color: white;
   animation: start_message_p 3000ms;
 }
 .start .start-message .start-secondary-bg {
   height: 100%;
-  width: 66.6666%;
+  width: 50%;
   background: var(--mainTheme);
   transform: translate(-100%);
   animation: start_secondary_bg 3400ms;
-}
-.start .start-message .start-secondary-bg .start-secondary-inner {
-  height: 100%;
-  width: 50%;
-  background-color: var(--themeColor);
-  animation: start_secondary_inner 3800ms;
 }
 
 .header {
@@ -912,7 +906,7 @@ section > .content {
   }
   70% {
     transform: none;
-    opacity: 1;
+    opacity: 0.75;
   }
   90%, 100% {
     transform: translateX(-200%);
@@ -1001,6 +995,10 @@ section > .content {
   src: url("../assets/fonts/Candara/CANDARA.TTF");
 }
 @font-face {
+  font-family: Quicksand;
+  src: url("../assets/fonts/Quicksand/static/Quicksand-Regular.ttf");
+}
+@font-face {
   font-family: Lato;
   src: url("../assets/fonts/Lato/Lato-Regular.ttf");
 }
@@ -1043,9 +1041,17 @@ body {
   box-sizing: border-box;
 }
 
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeColor);
+  height: 100vh;
+}
+
 .app {
   color: var(--mainThemeInv);
-  font-family: "Work Sans", "Zen Kaku", Lato, Candara, sans-serif;
+  font-family: Quicksand, Lato, Candara, sans-serif;
   animation: color_shift 40000ms infinite;
   overflow-x: hidden;
 }

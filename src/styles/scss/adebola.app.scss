@@ -15,6 +15,10 @@
   src: url("../assets/fonts/Candara/CANDARA.TTF");
 }
 @font-face {
+  font-family: Quicksand;
+  src: url("../assets/fonts/Quicksand/static/Quicksand-Regular.ttf");
+}
+@font-face {
   font-family: Lato;
   src: url("../assets/fonts/Lato/Lato-Regular.ttf");
 }
@@ -59,9 +63,16 @@ body {
   background-color: var(--mainTheme);
   box-sizing: border-box;
 }
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeColor);
+  height: 100vh;
+}
 .app {
   color: var(--mainThemeInv);
-  font-family: "Work Sans", "Zen Kaku", Lato, Candara, sans-serif;
+  font-family: Quicksand, Lato, Candara, sans-serif;
   animation: color_shift 40000ms infinite;
   overflow-x: hidden;
   // --themeColor: #16a5d4;

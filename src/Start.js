@@ -1,17 +1,15 @@
 import React from "react";
-import { useDelay } from "./utils/hooks";
-import { resizeWindow } from "./redux/actions";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Start from "./components/Start";
+import { useDelay } from "./utils/hooks";
+import { useDispatch } from "react-redux";
+import { resizeWindow } from "./redux/actions";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import Cursor from "./components/Cursor.jsx";
 import Home from "./pages/Home/index";
 import AboutMe from "./pages/About";
-import "./styles/adebola.css";
-import { useDispatch } from "react-redux";
 
-const Adebola = () => {
+const Start = () => {
   const delay = useDelay(3600);
   const dispatch = useDispatch();
   React.useEffect(() => {
@@ -24,9 +22,23 @@ const Adebola = () => {
       if (!mounted) window.removeEventListener("resize", changeSectionHeight);
     };
   }, []);
-  if (delay) {
-    return <Start />;
-  } else
+  if (delay)
+    return (
+      <div className="start">
+        <div
+          className="flex start-message"
+          style={{ height: `${window.innerHeight}px` }}
+        >
+          <div className="fc start-main-bg">
+            <p>Hi there.</p>
+          </div>
+          <div className="start-secondary-bg">
+            {/* <div className="start-secondary-inner"></div> */}
+          </div>
+        </div>
+      </div>
+    );
+  else
     return (
       <div className="app">
         <Router>
@@ -42,4 +54,4 @@ const Adebola = () => {
     );
 };
 
-export default Adebola;
+export default Start;
