@@ -22,12 +22,6 @@
       background: var(--mainTheme);
       transform: translate(-100%);
       animation: start_secondary_bg $start_message + 400 + ms;
-      // .start-secondary-inner {
-      //   height: 100%;
-      //   width: 50%;
-      //   background-color: white;
-      //   animation: start_secondary_inner $start_message + 1000 + ms;
-      // }
     }
   }
 }

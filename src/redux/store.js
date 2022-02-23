@@ -20,13 +20,20 @@ const initialState = {
   bannerScale: "1",
   bannerTranslateY: "0",
   test: "testing",
+  parallaxTranslate: [0, 0],
 };
 
 const reducer = function (
   state = initialState,
-  action = { type: "NO_ACTION", payload: "", subload: "" }
+  action = { type: "NO_ACTION", payload: "" }
 ) {
   switch (action.type) {
+    case "HOME_PARALLAX":
+      return {
+        ...state,
+        parallaxTranslate: [action.payload[0], action.payload[1]],
+      };
+      break;
     case "TOGGLE_HEADER_COLOR":
       return {
         ...state,

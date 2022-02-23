@@ -42,6 +42,7 @@ section > .content {
   width: 60%;
   margin-bottom: 4px;
   font-size: 50pt;
+  transition-duration: 500ms;
   animation: heading $home_page_animation_speed + ms;
   @media (min-width: 2560px) {
     width: 72%;

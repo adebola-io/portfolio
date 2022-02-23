@@ -1,8 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 const HomeBanner = () => {
   const state = useSelector((state) => state);
+  const dispatch = useDispatch();
   function goToContacts() {
     document.querySelector("html").scrollTop =
       window.innerWidth > 769
@@ -14,7 +15,12 @@ const HomeBanner = () => {
       <div className="overlay"></div>
       <div className="content">
         <div className="home-heading-container">
-          <h1 className="home-heading">
+          <h1
+            style={{
+              transform: `translate(${state.parallaxTranslate[0]}px, ${state.parallaxTranslate[1]}px)`,
+            }}
+            className="home-heading"
+          >
             Adebola Akomolafe, <span>Web Developer.</span>
           </h1>
         </div>
