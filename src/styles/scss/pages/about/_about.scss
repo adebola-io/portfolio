@@ -13,10 +13,8 @@
   }
 }
 #stack-list {
-  display: -ms-grid;
-  display: -moz-grid;
-  display: grid;
-  grid: auto/ auto auto auto;
+  display: flex;
+  flex-direction: column;
   width: 94%;
   margin: 0;
   padding: 0 3%;
@@ -29,17 +27,20 @@
     // list-style: none;
     list-style-type: disc;
     color: white;
-    .stack-t-logo {
-      height: 50%;
-      opacity: 0;
-      transition-duration: 300ms;
-      filter: saturate(0);
+    progress {
+      height: 90px;
     }
-    #nextjs-logo {
-      filter: saturate(0) invert(1);
-    }
-    #tailwind-logo {
-      height: 40%;
-    }
+    // .stack-t-logo {
+    //   height: 50%;
+    //   opacity: 0;
+    //   transition-duration: 300ms;
+    //   filter: saturate(0);
+    // }
+    // #nextjs-logo {
+    //   filter: saturate(0) invert(1);
+    // }
+    // #tailwind-logo {
+    //   height: 40%;
+    // }
   }
 }

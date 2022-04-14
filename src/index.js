@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import reducer from "./redux/store";
+import reducer from "./redux/reducer";
 import reportWebVitals from "./reportWebVitals";
 import Start from "./Start";
 import "./styles/adebola.css";

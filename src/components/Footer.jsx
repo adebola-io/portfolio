@@ -27,8 +27,4 @@ const Footer = () => {
   );
 };
 
-const FtrLink = (props) => {
-  return <></>;
-};
-
 export default Footer;

@@ -6,7 +6,7 @@ import HomeBanner from "./HomeBanner";
 // import BackdropText from "../../components/BackdropText.jsx";
 import Lines from "./Lines";
 import { useSelector } from "react-redux";
-import { element, elementAll, whenInView } from "../../utils/func";
+import { element, elementAll } from "../../utils/func";
 
 const Home = () => {
   const state = useSelector((state) => state);

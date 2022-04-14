@@ -1,5 +1,8 @@
 @import "../config/variables";
 figure#cursor {
+  @media (max-width: 768px) {
+    display: none;
+  }
   position: fixed;
   top: 0;
   z-index: 99;

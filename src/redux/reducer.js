@@ -33,7 +33,6 @@ const reducer = function (
         ...state,
         parallaxTranslate: [action.payload[0], action.payload[1]],
       };
-      break;
     case "TOGGLE_HEADER_COLOR":
       return {
         ...state,
