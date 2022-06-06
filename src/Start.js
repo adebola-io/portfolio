@@ -8,6 +8,7 @@ import Footer from "./components/Footer.jsx";
 import Cursor from "./components/Cursor.jsx";
 import Home from "./pages/Home/index";
 import AboutMe from "./pages/About";
+import NotFound from "./pages/NotFound";
 
 const Start = () => {
   const delay = useDelay(3600);
@@ -21,7 +22,7 @@ const Start = () => {
     return () => {
       if (!mounted) window.removeEventListener("resize", changeSectionHeight);
     };
-  }, []);
+  }, [dispatch]);
   if (delay)
     return (
       <div className="start">
@@ -47,6 +48,7 @@ const Start = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-me" element={<AboutMe />} />
+            <Route path="*" element={<NotFound/>} />
           </Routes>
           <Footer />
         </Router>

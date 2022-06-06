@@ -42,7 +42,15 @@ const Header = () => {
             <NavLink to="/about-me" name="About Me" />
           </ul>
         </nav> */}
+        <a
+          href="./adebola-akomolafe-resume.pdf"
+          className="resume_link"
+          download
+        >
+          Download Resume
+        </a>
         <button
+          className="dropdown_toggle"
           style={{
             "--beforeTransform": state.sideBarIsOpen
               ? "rotate(-45deg) translate(0, 258%)"

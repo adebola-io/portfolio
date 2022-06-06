@@ -15,15 +15,31 @@
     height: 105px;
     font-size: 25pt;
   }
-  button {
-    // display: none;
-    // @media (max-width: 475px) {
+  .resume_link {
+    z-index: 99;
+    margin-left: auto;
+    padding: 10px 13px;
+    font-size: 11pt;
+    background-color: transparent;
+    font-family: inherit;
+    color: var(--themeColor);
+    border: 2px solid var(--themeColor);
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: 500ms;
+    text-decoration: none;
+    &:hover {
+      background-color: var(--themeColor);
+      color: var(--mainTheme);
+    }
+  }
+  .dropdown_toggle {
     display: flex;
-    // }
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
+    // margin-left: auto;
+    margin-left: 3%;
     height: 45px;
     width: 45px;
     background-color: transparent;
