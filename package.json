@@ -2,26 +2,20 @@
   "name": "adebola",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/",
+  "entry": "index.html",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
-    "react-router-dom": "^6.2.1",
-    "react-scripts": "4.0.3",
-    "redux": "^4.1.2",
-    "sass": "^1.49.7",
-    "web-vitals": "^1.1.2"
+    "@tanstack/react-router": "beta",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.0.1",
+    "react-router-dom": "^6.20.1",
+    "redux": "^5.0.0",
+    "sass": "^1.69.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "watch-sass": "sass --watch ./src/styles/scss/adebola.app.scss:./src/styles/adebola.css",
-    "eject": "react-scripts eject"
+    "dev": "vite dev",
+    "build": "vite build",
+    "watch-sass": "sass --watch ./src/styles/scss/adebola.app.scss:./src/styles/adebola.css"
   },
   "eslintConfig": {
     "extends": [

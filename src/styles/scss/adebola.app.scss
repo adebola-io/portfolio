@@ -11,122 +11,122 @@
 @use "config/animations";
 
 @font-face {
-  font-family: Candara;
-  src: url("../assets/fonts/Candara/CANDARA.TTF");
+   font-family: Candara;
+   src: url("../../assets/fonts/Candara/CANDARA.TTF");
 }
 @font-face {
-  font-family: Quicksand;
-  src: url("../assets/fonts/Quicksand/static/Quicksand-Regular.ttf");
+   font-family: Quicksand;
+   src: url("../../assets/fonts/Quicksand/static/Quicksand-Regular.ttf");
 }
 @font-face {
-  font-family: Lato;
-  src: url("../assets/fonts/Lato/Lato-Regular.ttf");
+   font-family: Lato;
+   src: url("../../assets/fonts/Lato/Lato-Regular.ttf");
 }
 @font-face {
-  font-family: "Open Sans";
-  src: url("../assets/fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
+   font-family: "Open Sans";
+   src: url("../../assets/fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
 }
 @font-face {
-  font-family: Poppins;
-  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf");
+   font-family: Poppins;
+   src: url("../../assets/fonts/Poppins/Poppins-Regular.ttf");
 }
 :root {
-  --mainTheme: #020202;
-  --mainThemeInv: white;
-  // --mainTheme: white;
-  // --mainThemeInv: #141414;
-  // --themeColor: #6108aa;
-  // --themeColor: #0993d3;
-  --themeColor: #ffb900;
-  --color_shift_transition_duration: 1250ms;
+   --mainTheme: #020202;
+   --mainThemeInv: white;
+   // --mainTheme: white;
+   // --mainThemeInv: #141414;
+   // --themeColor: #6108aa;
+   // --themeColor: #0993d3;
+   --themeColor: #ffb900;
+   --color_shift_transition_duration: 1250ms;
 }
 html {
-  scroll-behavior: smooth;
-  // cursor: none;
-  &::-webkit-scrollbar {
-    // display: none;
-    background-color: var(--mainTheme);
-  }
-  &::-webkit-scrollbar-thumb {
-    &:hover {
-      background-color: var(--themeColor);
-    }
-    background-color: #414141;
-  }
+   scroll-behavior: smooth;
+   // cursor: none;
+   &::-webkit-scrollbar {
+      // display: none;
+      background-color: var(--mainTheme);
+   }
+   &::-webkit-scrollbar-thumb {
+      &:hover {
+         background-color: var(--themeColor);
+      }
+      background-color: #414141;
+   }
 }
 body {
-  margin: 0;
-  background-color: var(--mainTheme);
-  box-sizing: border-box;
+   margin: 0;
+   background-color: var(--mainTheme);
+   box-sizing: border-box;
 }
 .loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--themeColor);
-  height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--themeColor);
+   height: 100vh;
 }
 .app {
-  color: var(--mainThemeInv);
-  font-family: Quicksand, Lato, Candara, sans-serif;
-  // animation: color_shift 40000ms infinite;
-  overflow-x: hidden;
+   color: var(--mainThemeInv);
+   font-family: Quicksand, Lato, Candara, sans-serif;
+   // animation: color_shift 40000ms infinite;
+   overflow-x: hidden;
 }
 .page {
-  animation: page 800ms;
+   animation: page 800ms;
 }
 main {
-  margin-top: 65px;
+   margin-top: 65px;
 }
 
 .backdrop {
-  position: fixed;
-  top: 0;
-  z-index: -3;
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  color: #252525;
-  font-size: 40vw;
-  font-family: sans-serif;
-  overflow: hidden;
-  p {
-    animation: backdroptxt 7000ms infinite linear;
-  }
-  @media (max-width: 425px) {
-    color: #1c1c1c;
-  }
-  span {
-    transform: translateX(-40%);
-    animation: backdroptxt 750ms;
-    transition-duration: 200ms;
-    p {
-      margin: 0;
-      white-space: nowrap;
-    }
-  }
+   position: fixed;
+   top: 0;
+   z-index: -3;
+   display: flex;
+   align-items: center;
+   height: 100vh;
+   width: 100vw;
+   color: #252525;
+   font-size: 40vw;
+   font-family: sans-serif;
+   overflow: hidden;
+   p {
+      animation: backdroptxt 7000ms infinite linear;
+   }
+   @media (max-width: 425px) {
+      color: #1c1c1c;
+   }
+   span {
+      transform: translateX(-40%);
+      animation: backdroptxt 750ms;
+      transition-duration: 200ms;
+      p {
+         margin: 0;
+         white-space: nowrap;
+      }
+   }
 }
 
 //
 .flex {
-  display: flex;
+   display: flex;
 }
 .fixed {
-  position: fixed;
+   position: fixed;
 }
 .fcx {
-  display: flex;
-  justify-content: center;
+   display: flex;
+   justify-content: center;
 }
 .fcy {
-  display: flex;
-  align-items: center;
+   display: flex;
+   align-items: center;
 }
 .fc {
-  @extend .flex, .fcx, .fcy;
+   @extend .flex, .fcx, .fcy;
 }
 .fcol {
-  @extend .flex;
-  flex-direction: column;
+   @extend .flex;
+   flex-direction: column;
 }
